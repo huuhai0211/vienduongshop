@@ -1,0 +1,19 @@
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Common\bin\Debug\Shop.Common.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Common\bin\Debug\Shop.Common.pdb
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Common\obj\Debug\Shop.Common.csproj.CoreCompileInputs.cache
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Common\obj\Debug\Shop.Common.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Common\obj\Debug\Shop.Common.pdb
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Common\bin\Debug\Shop.Common.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Common\bin\Debug\Shop.Common.pdb
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Common\obj\Debug\Shop.Common.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Common\obj\Debug\Shop.Common.pdb
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Common\obj\Debug\Shop.Common.csprojResolveAssemblyReference.cache
+E:\DoAn\VienDuongShop\Shop.Common\bin\Debug\Shop.Common.dll
+E:\DoAn\VienDuongShop\Shop.Common\bin\Debug\Shop.Common.pdb
+E:\DoAn\VienDuongShop\Shop.Common\obj\Debug\Shop.Common.csprojResolveAssemblyReference.cache
+E:\DoAn\VienDuongShop\Shop.Common\obj\Debug\Shop.Common.dll
+E:\DoAn\VienDuongShop\Shop.Common\obj\Debug\Shop.Common.pdb
+G:\DoAn\VienDuongShop\Shop.Common\bin\Debug\Shop.Common.dll
+G:\DoAn\VienDuongShop\Shop.Common\bin\Debug\Shop.Common.pdb
+G:\DoAn\VienDuongShop\Shop.Common\obj\Debug\Shop.Common.dll
+G:\DoAn\VienDuongShop\Shop.Common\obj\Debug\Shop.Common.pdb

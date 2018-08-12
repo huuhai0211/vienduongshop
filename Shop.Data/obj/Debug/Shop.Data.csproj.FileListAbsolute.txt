@@ -1,0 +1,86 @@
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Data\bin\Debug\Shop.Data.dll.config
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Data\bin\Debug\Shop.Data.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Data\bin\Debug\Shop.Data.pdb
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Data\bin\Debug\EntityFramework.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Data\bin\Debug\Shop.Common.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Data\bin\Debug\Shop.Common.pdb
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Data\bin\Debug\EntityFramework.xml
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Data\obj\Debug\Shop.Data.csprojAssemblyReference.cache
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Data\obj\Debug\Shop.Data.csproj.CoreCompileInputs.cache
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Data\obj\Debug\Shop.Data.csproj.CopyComplete
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Data\obj\Debug\Shop.Data.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Shop\Shop.Data\obj\Debug\Shop.Data.pdb
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\Shop.Data.dll.config
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\Shop.Data.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\Shop.Data.pdb
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\EntityFramework.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\Shop.Common.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\Shop.Model.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\Shop.Common.pdb
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\Shop.Model.pdb
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\EntityFramework.xml
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\obj\Debug\Shop.Data.Migrations.InitialDB.resources
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\obj\Debug\Shop.Data.Migrations.AddErrorTable.resources
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\obj\Debug\Shop.Data.Migrations.IntergrateAspnetIdentity.resources
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\obj\Debug\Shop.Data.Migrations.Changekey.resources
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\obj\Debug\Shop.Data.Migrations.AddTagField.resources
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\obj\Debug\Shop.Data.csproj.GenerateResource.cache
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\obj\Debug\Shop.Data.dll
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\obj\Debug\Shop.Data.pdb
+D:\Hoctap\ASP.NET MVC\drive-download-20180510T094734Z-009\Git\Shop.Data\obj\Debug\Shop.Data.csprojResolveAssemblyReference.cache
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Shop.Data.dll.config
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Shop.Data.dll
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Shop.Data.pdb
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\EntityFramework.dll
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Shop.Common.dll
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Shop.Model.dll
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Shop.Common.pdb
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Shop.Model.pdb
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\EntityFramework.xml
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.csprojResolveAssemblyReference.cache
+E:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.Migrations.InitialDB.resources
+E:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.Migrations.AddErrorTable.resources
+E:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.Migrations.IntergrateAspnetIdentity.resources
+E:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.Migrations.Changekey.resources
+E:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.Migrations.AddTagField.resources
+E:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.csproj.GenerateResource.Cache
+E:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.dll
+E:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.pdb
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Shop.Data.dll.config
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Shop.Data.dll
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Shop.Data.pdb
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\EntityFramework.dll
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\EntityFramework.SqlServer.dll
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Shop.Common.dll
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Shop.Model.dll
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Shop.Common.pdb
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Shop.Model.pdb
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\EntityFramework.xml
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\EntityFramework.SqlServer.xml
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+G:\DoAn\VienDuongShop\Shop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.csprojResolveAssemblyReference.cache
+G:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.Migrations.InitialDB.resources
+G:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.Migrations.AddErrorTable.resources
+G:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.Migrations.IntergrateAspnetIdentity.resources
+G:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.Migrations.Changekey.resources
+G:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.Migrations.AddTagField.resources
+G:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.csproj.GenerateResource.Cache
+G:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.dll
+G:\DoAn\VienDuongShop\Shop.Data\obj\Debug\Shop.Data.pdb
