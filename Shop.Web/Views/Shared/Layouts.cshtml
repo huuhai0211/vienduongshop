@@ -1,39 +1,262 @@
-﻿
+﻿@*<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Big shope A Ecommerce Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+        <link href="/Assets/client/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <!--theme-style-->
+        <link href="/Assets/client/css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <!--//theme-style-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!--fonts-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <!--//fonts-->
+        <script src="/Assets/client/js/jquery.min.js"></script>
+        <!--script-->
+    </head>
+    <body>
+        <!--header-->
+        @{ Html.RenderAction("Header", "Home");}
+        <!---->
+        <div class="container">
+           @RenderBody()
+        </div>
+        @RenderSection("homeProducts", required: false)
+        <!---->
+
+        <div class="clearfix"> </div>
+        </div>
+        @{ Html.RenderAction("Category", "Home");}
+        <div class="clearfix"> </div>
+        </div>
+
+        <!---->
+        @{ Html.RenderAction("Footer", "Home");}
+
+        @RenderSection("footerJS",required: false)
+    </body>
+    </html>*@
+
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="zxx">
 <head>
-    <title>Big shope A Ecommerce Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
-    <link href="/Assets/client/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <!--theme-style-->
-    <link href="/Assets/client/css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <!--//theme-style-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!--fonts-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <!--//fonts-->
-    <script src="/Assets/client/js/jquery.min.js"></script>
-    <!--script-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Viễn Dương Shop</title>
+    <meta name="description" content="">
+    <meta name="robots" content="noindex, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/Assets/client/img/favicon.png">
+    <!-- all css here -->
+    <link rel="stylesheet" href="/Assets/client/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Assets/client/css/animate.css">
+    <link rel="stylesheet" href="/Assets/client/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/Assets/client/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Assets/client/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="/Assets/client/css/meanmenu.min.css">
+    <link rel="stylesheet" href="/Assets/client/css/style.css">
+    <link rel="stylesheet" href="/Assets/client/css/responsive.css">
+    <script src="/Assets/client/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-    <!--header-->
     @{ Html.RenderAction("Header", "Home");}
-    <!---->
-    <div class="container">
-       @RenderBody()
+    @RenderBody()
+    <div class="brand-logo-area mb-30">
+        <div class="container">
+            <div class="brand-logo-active owl-carousel nav-style">
+                <div class="single-brand-logo">
+                    <a href="#"><img src="/Assets/client/img/brand-logo/brand-1.png" alt=""></a>
+                </div>
+                <div class="single-brand-logo">
+                    <a href="#"><img src="/Assets/client/img/brand-logo/brand-2.png" alt=""></a>
+                </div>
+                <div class="single-brand-logo">
+                    <a href="#"><img src="/Assets/client/img/brand-logo/brand-3.png" alt=""></a>
+                </div>
+                <div class="single-brand-logo">
+                    <a href="#"><img src="/Assets/client/img/brand-logo/brand-4.png" alt=""></a>
+                </div>
+                <div class="single-brand-logo">
+                    <a href="#"><img src="/Assets/client/img/brand-logo/brand-2.png" alt=""></a>
+                </div>
+                <div class="single-brand-logo">
+                    <a href="#"><img src="/Assets/client/img/brand-logo/brand-4.png" alt=""></a>
+                </div>
+            </div>
+        </div>
     </div>
-    @RenderSection("homeProducts", required: false)
-    <!---->
-   
-    <div class="clearfix"> </div>
-    </div>
-    @{ Html.RenderAction("Category", "Home");}
-    <div class="clearfix"> </div>
-    </div>
-
-    <!---->
     @{ Html.RenderAction("Footer", "Home");}
-
-    @RenderSection("footerJS",required: false)
+    
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-12">
+                            <div class="modal-tab">
+                                <div class="product-details-large tab-content">
+                                    <div class="tab-pane active" id="image-1">
+                                        <img src="/Assets/client/img/product/quickview-l4.jpg" alt="" />
+                                    </div>
+                                    <div class="tab-pane" id="image-2">
+                                        <img src="/Assets/client/img/product/quickview-l2.jpg" alt="" />
+                                    </div>
+                                    <div class="tab-pane" id="image-3">
+                                        <img src="/Assets/client/img/product/quickview-l3.jpg" alt="" />
+                                    </div>
+                                    <div class="tab-pane" id="image-4">
+                                        <img src="/Assets/client/img/product/quickview-l5.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="product-details-small quickview-active nav-style owl-carousel">
+                                    <a href="#image-1"><img src="/Assets/client/img/product/quickview-s4.jpg" alt="" /></a>
+                                    <a href="#image-2"><img src="/Assets/client/img/product/quickview-s2.jpg" alt="" /></a>
+                                    <a href="#image-3"><img src="/Assets/client/img/product/quickview-s3.jpg" alt="" /></a>
+                                    <a href="#image-4"><img src="/Assets/client/img/product/quickview-s5.jpg" alt="" /></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-12">
+                            <div class="modal-pro-content">
+                                <h3>Ornare consequat</h3>
+                                <div class="product-price-wrapper">
+                                    <span class="product-price-old">£162.00 </span>
+                                    <span>£120.00</span>
+                                </div>
+                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
+                                <div class="quick-view-select">
+                                    <div class="select-option-part">
+                                        <label>Size*</label>
+                                        <select class="select">
+                                            <option value="">S</option>
+                                            <option value="">M</option>
+                                            <option value="">L</option>
+                                        </select>
+                                    </div>
+                                    <div class="quickview-color-wrap">
+                                        <label>Color*</label>
+                                        <div class="quickview-color">
+                                            <ul>
+                                                <li class="blue">b</li>
+                                                <li class="red">r</li>
+                                                <li class="pink">p</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-quantity">
+                                    <div class="cart-plus-minus">
+                                        <input class="cart-plus-minus-box" type="text" name="qtybutton" value="02">
+                                    </div>
+                                    <button>Add to cart</button>
+                                </div>
+                                <span><i class="fa fa-check"></i> In stock</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
+    <!-- Compare -->
+    <div class="modal fade" id="exampleCompare" tabindex="-1" role="dialog" aria-hidden="true">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="pe-7s-close"></span>
+        </button>
+        <div class="modal-dialog modal-compare-width" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="table-content compare-style table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>
+                                            <a href="#">Remove <span>x</span></a>
+                                            <img src="/Assets/client/img/product/compare-1.jpg" alt="">
+                                            <p>Phantom Remote Control Ver 2018</p>
+                                            <span>$75.99</span>
+                                            <a class="compare-btn" href="cart.html">Add to cart</a>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="compare-title"><h4>Description </h4></td>
+                                        <td class="compare-dec compare-common">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has beenin the stand ard dummy text ever since the 1500s, when an unknown printer.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="compare-title"><h4>Sku </h4></td>
+                                        <td class="product-none compare-common">
+                                            <p>-</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="compare-title"><h4>Availability  </h4></td>
+                                        <td class="compare-stock compare-common">
+                                            <p>In stock</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="compare-title"><h4>Weight   </h4></td>
+                                        <td class="compare-none compare-common">
+                                            <p>-</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="compare-title"><h4>Dimensions   </h4></td>
+                                        <td class="compare-stock compare-common">
+                                            <p>N/A</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="compare-title"><h4>brand   </h4></td>
+                                        <td class="compare-brand compare-common">
+                                            <p>HasTech</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="compare-title"><h4>color   </h4></td>
+                                        <td class="compare-color compare-common">
+                                            <p>Grey, Light Yellow, Green, Blue, Purple, Black </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="compare-title"><h4>size    </h4></td>
+                                        <td class="compare-size compare-common">
+                                            <p>XS, S, M, L, XL, XXL </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="compare-title"></td>
+                                        <td class="compare-price compare-common">
+                                            <p>$75.99 </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- all js here -->
+    <script src="/Assets/client/js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="/Assets/client/js/popper.js"></script>
+    <script src="/Assets/client/js/bootstrap.min.js"></script>
+    <script src="/Assets/client/js/ajax-mail.js"></script>
+    <script src="/Assets/client/js/owl.carousel.min.js"></script>
+    <script src="/Assets/client/js/plugins.js"></script>
+    <script src="/Assets/client/js/main.js"></script>
 </body>
 </html>

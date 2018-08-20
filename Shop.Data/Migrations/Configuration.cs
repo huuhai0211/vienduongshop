@@ -19,7 +19,7 @@
         protected override void Seed(Shop.Data.ShopDbContext context)
         {
             //CreateAdmin(context);
-            CreateSlide(context);
+            //CreateSlide(context);
             
         }
 

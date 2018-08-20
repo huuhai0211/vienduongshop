@@ -1,32 +1,91 @@
-﻿@model Shop.Web.Models.FooterViewModel
-<div class="footer">
-    <div class="footer-top">
+﻿<footer>
+    <div class="footer-top black-bg pt-55">
         <div class="container">
-            <div class="latter">
-                <h6>Đăng kí nhận thư</h6>
-                <div class="sub-left-right">
-                    <form>
-                        <input type="text" placeholder="Nhập email tại đây" />
-                        <input type="submit" value="Gửi" />
-                    </form>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-widget mb-35">
+                        <div class="footer-title mb-35">
+                            <h4>Our services</h4>
+                        </div>
+                        <div class="footer-content">
+                            <ul>
+                                <li><a href="#">Shipping & Returns</a></li>
+                                <li><a href="#">Secure Shopping</a></li>
+                                <li><a href="#">International Shipping</a></li>
+                                <li><a href="#">Affiliates</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-social">
+                            <ul>
+                                <li><a data-tooltip="facebook" class="tooltip-coustom" href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a data-tooltip="twitter" class="tooltip-coustom" href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a data-tooltip="tumblr" class="tooltip-coustom" href="#"><i class="fa fa-tumblr"></i></a></li>
+                                <li><a data-tooltip="google-plus" class="tooltip-coustom" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a data-tooltip="dribbble" class="tooltip-coustom" href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="clearfix"> </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-widget mb-35">
+                        <div class="footer-title mb-35">
+                            <h4>Infomation</h4>
+                        </div>
+                        <div class="footer-content">
+                            <ul>
+                                <li><a href="#">Our Blog</a></li>
+                                <li><a href="#">About Our Shop</a></li>
+                                <li><a href="#">Secure Shopping</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Delivery infomation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-widget mb-35">
+                        <div class="footer-title mb-35">
+                            <h4>Customer care</h4>
+                        </div>
+                        <div class="footer-content">
+                            <ul>
+                                <li><a href="#">Sitemap</a></li>
+                                <li><a href="#">Term & Conditions</a></li>
+                                <li><a href="#">Gift Vouchers</a></li>
+                                <li><a href="#">BestSellers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-widget mb-35">
+                        <div class="footer-title mb-35">
+                            <h4>Facebook</h4>
+                        </div>
+                        <div class="footer-fb">
+                            <a href="#"><img src="/Assets/client/img/banner/banner-11.png" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="latter-right">
-                <p>Theo dõi</p>
-                <ul class="face-in-to">
-                    <li><a href="#"><span> </span></a></li>
-                    <li><a href="#"><span class="facebook-in"> </span></a></li>
-                    <div class="clearfix"> </div>
-                </ul>
-                <div class="clearfix"> </div>
-            </div>
-            <div class="clearfix"> </div>
         </div>
     </div>
-    <div class="footer-bottom">
+    <div class="footer-bottom black-bg-2 ptb-15">
         <div class="container">
-          @Html.Raw(Model.Content)
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="copyright">
+                        <p>Copyright © <a href="#">Futon.</a> All Rights Reserved. </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="payment-img text-right">
+                        <a href="#">
+                            <img alt="payment" src="/Assets/client/img/icon-img/payment.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</footer>
