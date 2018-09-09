@@ -22,3 +22,8 @@ G:\DoAn\VienDuong\Shop.Common\bin\Debug\Shop.Common.pdb
 G:\DoAn\VienDuong\Shop.Common\obj\Debug\Shop.Common.csprojResolveAssemblyReference.cache
 G:\DoAn\VienDuong\Shop.Common\obj\Debug\Shop.Common.dll
 G:\DoAn\VienDuong\Shop.Common\obj\Debug\Shop.Common.pdb
+H:\DoAn\VienDuong\Shop.Common\bin\Debug\Shop.Common.dll
+H:\DoAn\VienDuong\Shop.Common\bin\Debug\Shop.Common.pdb
+H:\DoAn\VienDuong\Shop.Common\obj\Debug\Shop.Common.csprojResolveAssemblyReference.cache
+H:\DoAn\VienDuong\Shop.Common\obj\Debug\Shop.Common.dll
+H:\DoAn\VienDuong\Shop.Common\obj\Debug\Shop.Common.pdb

@@ -66,3 +66,17 @@ G:\DoAn\VienDuong\Shop.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework
 G:\DoAn\VienDuong\Shop.Model\obj\Debug\Shop.Model.csprojResolveAssemblyReference.cache
 G:\DoAn\VienDuong\Shop.Model\obj\Debug\Shop.Model.dll
 G:\DoAn\VienDuong\Shop.Model\obj\Debug\Shop.Model.pdb
+H:\DoAn\VienDuong\Shop.Model\bin\Debug\Shop.Model.dll.config
+H:\DoAn\VienDuong\Shop.Model\bin\Debug\Shop.Model.dll
+H:\DoAn\VienDuong\Shop.Model\bin\Debug\Shop.Model.pdb
+H:\DoAn\VienDuong\Shop.Model\bin\Debug\EntityFramework.dll
+H:\DoAn\VienDuong\Shop.Model\bin\Debug\EntityFramework.SqlServer.dll
+H:\DoAn\VienDuong\Shop.Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+H:\DoAn\VienDuong\Shop.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+H:\DoAn\VienDuong\Shop.Model\bin\Debug\EntityFramework.xml
+H:\DoAn\VienDuong\Shop.Model\bin\Debug\EntityFramework.SqlServer.xml
+H:\DoAn\VienDuong\Shop.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+H:\DoAn\VienDuong\Shop.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+H:\DoAn\VienDuong\Shop.Model\obj\Debug\Shop.Model.csprojResolveAssemblyReference.cache
+H:\DoAn\VienDuong\Shop.Model\obj\Debug\Shop.Model.dll
+H:\DoAn\VienDuong\Shop.Model\obj\Debug\Shop.Model.pdb
