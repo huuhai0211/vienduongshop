@@ -1,0 +1,5 @@
+G:\DoAn\VienDuong\Shop.Common\bin\Release\Shop.Common.dll
+G:\DoAn\VienDuong\Shop.Common\bin\Release\Shop.Common.pdb
+G:\DoAn\VienDuong\Shop.Common\obj\Release\Shop.Common.csprojResolveAssemblyReference.cache
+G:\DoAn\VienDuong\Shop.Common\obj\Release\Shop.Common.dll
+G:\DoAn\VienDuong\Shop.Common\obj\Release\Shop.Common.pdb

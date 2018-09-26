@@ -50,6 +50,8 @@ namespace Shop.Web.Controllers
         [ChildActionOnly]
         public ActionResult Header()
         {
+            var model = _productCategoryService.GetAll();
+            ViewBag.listProductCategoryViewModel = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(model);
             return PartialView();
         }
 
