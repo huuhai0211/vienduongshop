@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shop.Model.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -13,6 +14,8 @@ namespace Shop.Web.Models
         public string Alias { get; set; }
 
         public int CategoryID { get; set; }
+
+        public int BusinessID { get; set; }
 
         public string Image { get; set; }
 
@@ -52,5 +55,6 @@ namespace Shop.Web.Models
         public virtual IEnumerable<OrderDetailViewModel> OrderDetails { get; set; }
 
         public virtual IEnumerable<ProductTagViewModel> ProductTags { get; set; }
+        public virtual Contributor Contributors { get; set; }
     }
 }

@@ -212,6 +212,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\AccountController.cs" />
+    <Compile Include="Api\ContributorController.cs" />
     <Compile Include="Api\HomeController.cs" />
     <Compile Include="Api\PostCategoryController.cs" />
     <Compile Include="Api\ProductCategoryController.cs" />
@@ -232,6 +233,7 @@
     <Compile Include="Infrastructure\Core\PaginationSet.cs" />
     <Compile Include="Infrastructure\Extensions\EntityExtensions.cs" />
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
+    <Compile Include="Models\ContributorViewModel.cs" />
     <Compile Include="Models\FooterViewModel.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\OrderDetailViewModel.cs" />
@@ -249,6 +251,12 @@
   <ItemGroup>
     <Content Include=".bowerrc" />
     <Content Include="app\app.js" />
+    <Content Include="app\components\contributor\contributor.module.js" />
+    <Content Include="app\components\contributor\contributorAddView.html" />
+    <Content Include="app\components\contributor\contributorAddControlller.js" />
+    <Content Include="app\components\contributor\contributorEditController.js" />
+    <Content Include="app\components\contributor\contributorListController.js" />
+    <Content Include="app\components\contributor\contributorListView.html" />
     <Content Include="app\components\home\homeController.js" />
     <Content Include="app\components\home\homeView.html" />
     <Content Include="app\components\home\rootController.js" />
@@ -4616,8 +4624,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\components\orders\" />
-    <Folder Include="app\components\roles\" />
-    <Folder Include="app\components\users\" />
+    <Folder Include="app\components\users\roles\" />
     <Folder Include="app\shared\footer\" />
     <Folder Include="app\shared\navigation\" />
     <Folder Include="App_Data\" />

@@ -37,6 +37,7 @@ namespace Shop.Data
         public DbSet<VisitorStatistic> VisitorStatistics { get; set; }
 
         public DbSet<Error> Errors { get; set; }
+        public DbSet<Contributor> Contributors { get; set; }
 
         public static ShopDbContext Create()
         {

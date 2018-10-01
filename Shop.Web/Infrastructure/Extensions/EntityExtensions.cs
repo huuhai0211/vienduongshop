@@ -91,5 +91,20 @@ namespace Shop.Web.Infrastructure.Extensions
             product.Status = productViewModel.Status;
             product.Tags = productViewModel.Tags;
         }
+        public static void UpdateContributor(this Contributor contributor, ContributorViewModel contributorViewModel)
+        {
+            contributor.ID_Business = contributorViewModel.ID_Business;
+            contributor.Name = contributorViewModel.Name;
+            contributor.Alias = contributorViewModel.Alias;
+            contributor.Description = contributorViewModel.Description;
+            contributor.Address = contributorViewModel.Address;
+            contributor.Phone_Number = contributorViewModel.Phone_Number;
+            contributor.Email = contributorViewModel.Email;
+            contributor.CreatedDate = contributorViewModel.CreatedDate;
+            contributor.CreatedBy = contributorViewModel.CreatedBy;
+            contributor.UpdatedDate = contributorViewModel.UpdatedDate;
+            contributor.UpdatedBy = contributorViewModel.UpdatedBy;
+            contributor.Status = contributorViewModel.Status;
+        }
     }
 }

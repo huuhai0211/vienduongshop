@@ -25,7 +25,7 @@ namespace Shop.Web.Api
             this._productCategoryService = productCategoryService;
         }
 
-        [Route("getbyid/{id:int}")]
+        [Route("getbyid/{id:int}")] 
         [HttpGet]
         public HttpResponseMessage GetById(HttpRequestMessage request, int id)
         {

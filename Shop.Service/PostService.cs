@@ -21,7 +21,7 @@ namespace Shop.Service
         IEnumerable<Post> GetAllByTagPaging(string tag, int page, int pageSize, out int totalRow);
         void SaveChanges();
     }
-    class PostService : IPostService
+    public class PostService : IPostService
     {
         IPostRepository _postRepository;
         IUnitOfWork _unitOfWork;

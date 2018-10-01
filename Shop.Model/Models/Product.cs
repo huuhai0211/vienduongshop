@@ -25,6 +25,10 @@ namespace Shop.Model.Models
         [Required]
         public int CategoryID { get; set; }
 
+    //    [Required] THÊM SAU
+        public int?  BusinessID { get; set; }
+
+
         [MaxLength(256)]
         public string Image { get; set; }
 
@@ -49,5 +53,10 @@ namespace Shop.Model.Models
         public virtual IEnumerable<OrderDetail> OrderDetails { get; set; }
 
         public virtual IEnumerable<ProductTag> ProductTags { get; set; }
+
+
+        [ForeignKey("BusinessID")]
+        public virtual Contributor Contributors { get; set; }
+
     }
 }

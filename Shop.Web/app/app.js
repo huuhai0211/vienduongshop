@@ -3,7 +3,8 @@
     angular.module('shop', [
         'shop.products',
         'shop.product_categories',
-        'shop.common'
+        'shop.common',
+        'shop.contributor'
     ]).config(config)
     .config(configAuthentication);
 

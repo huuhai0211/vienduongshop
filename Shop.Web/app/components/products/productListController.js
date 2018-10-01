@@ -100,7 +100,7 @@
                 $scope.pagesCount = result.data.TotalPages;
                 $scope.totalCount = result.data.TotalCount;
             }, function () {
-                console.log('Load product  failed.');
+                console.log('Load product failed.');
             });
         }
         $scope.getProducts();
