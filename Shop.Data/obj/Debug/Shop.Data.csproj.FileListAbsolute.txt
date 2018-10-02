@@ -161,3 +161,5 @@ C:\Users\hnA\Documents\vienduongshop\Shop.Data\obj\Debug\Shop.Data.dll
 C:\Users\hnA\Documents\vienduongshop\Shop.Data\obj\Debug\Shop.Data.pdb
 C:\Users\hnA\Documents\vienduongshop\Shop.Data\obj\Debug\Shop.Data.Migrations.AddContributor.resources
 C:\Users\hnA\Documents\vienduongshop\Shop.Data\obj\Debug\Shop.Data.Migrations.fixnullproduct.resources
+G:\DoAn\VienDuong\Shop.Data\obj\Debug\Shop.Data.Migrations.AddContributor.resources
+G:\DoAn\VienDuong\Shop.Data\obj\Debug\Shop.Data.Migrations.fixnullproduct.resources

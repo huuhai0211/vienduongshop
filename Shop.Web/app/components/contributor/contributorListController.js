@@ -27,8 +27,6 @@
         $scope.isAll = false;
 
         $scope.deleteMultiple = deleteMultiple;
-        //cái này xong chưa thế? xong r, nhưng mà kb có thiếu gì ko nữa
-        //làm xong controllerthif làm luôn html để test
         function selectAll() {
             if ($scope.isAll === false) {
                 angular.forEach($scope.contributors, function (item) {

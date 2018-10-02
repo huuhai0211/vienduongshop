@@ -15,7 +15,7 @@ using System.Web.Script.Serialization;
 namespace Shop.Web.Api
 {
     [RoutePrefix("api/contributor")]
-    [Authorize]
+    //[Authorize]
     public class ContributorController : ApiControllerBase 
     {
         private IContributorService _contributorService;
@@ -42,7 +42,7 @@ namespace Shop.Web.Api
 
         [Route("getall")]
         [HttpGet]
-        public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
+        public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 1)
         {
             return CreateHttpResponse(request, () =>
             {

@@ -929,3 +929,11 @@ C:\Users\hnA\Documents\vienduongshop\Shop.Web\bin\Microsoft.CodeDom.Providers.Do
 C:\Users\hnA\Documents\vienduongshop\Shop.Web\obj\Debug\Shop.Web.csprojResolveAssemblyReference.cache
 C:\Users\hnA\Documents\vienduongshop\Shop.Web\obj\Debug\Shop.Web.dll
 C:\Users\hnA\Documents\vienduongshop\Shop.Web\obj\Debug\Shop.Web.pdb
+G:\DoAn\VienDuong\Shop.Web\bin\roslyn\Microsoft.Managed.Core.targets
+G:\DoAn\VienDuong\Shop.Web\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+G:\DoAn\VienDuong\Shop.Web\bin\roslyn\System.Globalization.Calendars.dll
+G:\DoAn\VienDuong\Shop.Web\bin\roslyn\System.IO.Compression.ZipFile.dll
+G:\DoAn\VienDuong\Shop.Web\bin\roslyn\System.Net.Http.dll
+G:\DoAn\VienDuong\Shop.Web\bin\roslyn\System.Net.Sockets.dll
+G:\DoAn\VienDuong\Shop.Web\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\DoAn\VienDuong\Shop.Web\bin\roslyn\System.Threading.Tasks.Extensions.dll

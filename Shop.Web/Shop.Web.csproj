@@ -253,7 +253,7 @@
     <Content Include="app\app.js" />
     <Content Include="app\components\contributor\contributor.module.js" />
     <Content Include="app\components\contributor\contributorAddView.html" />
-    <Content Include="app\components\contributor\contributorAddControlller.js" />
+    <Content Include="app\components\contributor\contributorAddController.js" />
     <Content Include="app\components\contributor\contributorEditController.js" />
     <Content Include="app\components\contributor\contributorListController.js" />
     <Content Include="app\components\contributor\contributorListView.html" />
