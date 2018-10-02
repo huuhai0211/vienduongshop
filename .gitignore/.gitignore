@@ -234,5 +234,3 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
-TeduShop.Web/UploadedFiles/
-/TeduShop.Web/Reports
