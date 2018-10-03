@@ -138,16 +138,20 @@
                         <li>
                             <a href="shop.html">Sản phẩm</a>
                             <ul class="mega-menu">
-                                <li class="single-mega-menu">
-                                    <ul>
-                                        <li class="mega-menu-title">furniture list</li>
-                                        <li><a href="shop.html">Bed</a></li>
-                                        <li><a href="shop.html">Sofa</a></li>
-                                        <li><a href="shop.html">Couch</a></li>
-                                        <li><a href="shop.html">Chair</a></li>
-                                        <li><a href="shop.html">Bookcase</a></li>
-                                    </ul>
-                                </li>
+                                @foreach (var category in ViewBag.listProductCategoryViewModel)
+                                {
+                                    var url = "/" + category.Alias + ".pc-" + category.ID + ".html";
+                                    <li class="single-mega-menu">
+                                        <ul>
+                                            <li class="mega-menu-title"><a href="@url">@category.Name</a></li>
+                                            @foreach (var product in category.Products)
+                                            {
+                                                <li><a href="shop.html">@product.Name</a></li>
+                                            }
+                                        </ul>
+                                    </li>
+                                }
+                                
                                 <li class="single-mega-menu">
                                     <ul class="single-mega-menu">
                                         <li class="mega-menu-title">furniture list </li>

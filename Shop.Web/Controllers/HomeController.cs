@@ -13,16 +13,27 @@ namespace Shop.Web.Controllers
     public class HomeController : Controller
     {
         IProductCategoryService _productCategoryService;
+        IProductService _productService;
         ICommonService _commonService;
 
-        public HomeController(IProductCategoryService productCategoryService, ICommonService commonService)
+        public HomeController(IProductCategoryService productCategoryService, IProductService productService, ICommonService commonService)
         {
             this._productCategoryService = productCategoryService;
+            this._productService = productService;
             this._commonService = commonService;
         }
         public ActionResult Index()
         {
-            return View();
+            var lastestProductModel = _productService.GetLastest(5);
+            var topSaleProductModel = _productService.GetHot(5);
+
+            var lastestProductViewModel = Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(lastestProductModel);
+            var topSaleProductViewModel = Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(topSaleProductModel);
+
+            var homeViewModel = new HomeViewModel();
+            homeViewModel.LastestProducts = lastestProductViewModel;
+            homeViewModel.TopSaleProducts = topSaleProductViewModel;
+            return View(homeViewModel);
         }
 
         public ActionResult About()
@@ -50,8 +61,13 @@ namespace Shop.Web.Controllers
         [ChildActionOnly]
         public ActionResult Header()
         {
-            var model = _productCategoryService.GetAll();
-            ViewBag.listProductCategoryViewModel = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(model);
+            var pC_model = _productCategoryService.GetAll();
+            
+            foreach(var productCategory in pC_model)
+            {
+                productCategory.Products = _productService.GetAllByCategoryId(productCategory.ID);
+            }
+            ViewBag.listProductCategoryViewModel = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(pC_model);
             return PartialView();
         }
 

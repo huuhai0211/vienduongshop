@@ -79,196 +79,49 @@
                     <div class="tab-content jump">
                         <div id="home1" class="tab-pane active">
                             <div class="product-slider-active-2 owl-carousel">
-                                <div class="product-wrapper">
-                                    <div class="product-img">
-                                        <a href="product-details.html">
-                                            <img class="primary-image" alt="" src="/Assets/client/img/product/pro-7.jpg">
-                                            <img class="secondary-image" alt="" src="/Assets/client/img/product/pro-1.jpg">
-                                        </a>
-                                        <span class="sale-text">Sale</span>
-                                        <div class="quick-view">
-                                            <a class="action-view" title="Quick View" data-toggle="modal" data-target="#productModal" href="#">
-                                                Quick View
+                                @foreach (var product in Model.LastestProducts)
+                                    {
+                                        var url = "/" + product.Alias + ".p-" + product.ID + ".html";
+                                    <div class="product-wrapper">
+                                        <div class="product-img">
+                                            <a href="@url">
+                                                <img class="primary-image img-responsive" style="height: 193px" alt="" src="@product.Image">
+                                                @*<img class="secondary-image" alt="" src="/Assets/client/img/product/pro-1.jpg">*@
                                             </a>
+                                            <span class="sale-text">Sale</span>
+                                            <div class="quick-view">
+                                                <a class="action-view" title="Quick View" data-toggle="modal" data-target="#productModal" href="#">
+                                                    Quick View
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content text-center">
+                                            <h4>
+                                                <a href="product-details.html">@product.Name</a>
+                                            </h4>
+                                            <div class="product-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <div class="product-price-wrapper">
+                                                <span class="product-price-old">@product.PromotionPrice</span>
+                                                <span>@product.Price</span>
+                                            </div>
+                                            <div class="product-action text-center">
+                                                <a class="action-cart" href="#"> Thêm vào giỏ @*<img class="secondary-image" alt="" src="@product.Image">*@</a>
+                                                <a data-tooltip="Wishlist" class="action-wishlist tooltip-coustom" href="#">
+                                                    <i class="fa fa-heart"></i>
+                                                </a>
+                                                <a data-tooltip="Compare" class="action-compare tooltip-coustom" href="#" data-toggle="modal" data-target="#exampleCompare">
+                                                    <i class="fa fa-exchange"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="product-content text-center">
-                                        <h4>
-                                            <a href="product-details.html">Feugiat justo lacinia</a>
-                                        </h4>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="product-price-wrapper">
-                                            <span class="product-price-old">£162.00 </span>
-                                            <span>£120.00</span>
-                                        </div>
-                                        <div class="product-action text-center">
-                                            <a class="action-cart" href="#"> Add to Cart <img class="secondary-image" alt="" src="/Assets/client/img/icon-img/cart-2.png"></a>
-                                            <a data-tooltip="Wishlist" class="action-wishlist tooltip-coustom" href="#">
-                                                <i class="fa fa-heart"></i>
-                                            </a>
-                                            <a data-tooltip="Compare" class="action-compare tooltip-coustom" href="#" data-toggle="modal" data-target="#exampleCompare">
-                                                <i class="fa fa-exchange"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-wrapper">
-                                    <div class="product-img">
-                                        <a href="product-details.html">
-                                            <img class="primary-image" alt="" src="/Assets/client/img/product/pro-8.jpg">
-                                            <img class="secondary-image" alt="" src="/Assets/client/img/product/pro-3.jpg">
-                                        </a>
-                                        <div class="quick-view">
-                                            <a class="action-view" title="Quick View" data-toggle="modal" data-target="#productModal" href="#">
-                                                Quick View
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content text-center">
-                                        <h4>
-                                            <a href="product-details.html">Aenean eu tristique</a>
-                                        </h4>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="product-price-wrapper">
-                                            <span>£120.00</span>
-                                        </div>
-                                        <div class="product-action text-center">
-                                            <a class="action-cart" href="#"> Add to Cart <img class="secondary-image" alt="" src="/Assets/client/img/icon-img/cart-2.png"></a>
-                                            <a data-tooltip="Wishlist" class="action-wishlist tooltip-coustom" href="#">
-                                                <i class="fa fa-heart"></i>
-                                            </a>
-                                            <a data-tooltip="Compare" class="action-compare tooltip-coustom" href="#" data-toggle="modal" data-target="#exampleCompare">
-                                                <i class="fa fa-exchange"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-wrapper">
-                                    <div class="product-img">
-                                        <a href="product-details.html">
-                                            <img class="primary-image" alt="" src="/Assets/client/img/product/pro-4.jpg">
-                                            <img class="secondary-image" alt="" src="/Assets/client/img/product/pro-5.jpg">
-                                        </a>
-                                        <span class="sale-text">Sale</span>
-                                        <div class="quick-view">
-                                            <a class="action-view" title="Quick View" data-toggle="modal" data-target="#productModal" href="#">
-                                                Quick View
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content text-center">
-                                        <h4>
-                                            <a href="product-details.html">Etiam eu neque</a>
-                                        </h4>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="product-price-wrapper">
-                                            <span class="product-price-old">£200.00 </span>
-                                            <span>£150.00</span>
-                                        </div>
-                                        <div class="product-action text-center">
-                                            <a class="action-cart" href="#"> Add to Cart <img class="secondary-image" alt="" src="/Assets/client/img/icon-img/cart-2.png"></a>
-                                            <a data-tooltip="Wishlist" class="action-wishlist tooltip-coustom" href="#">
-                                                <i class="fa fa-heart"></i>
-                                            </a>
-                                            <a data-tooltip="Compare" class="action-compare tooltip-coustom" href="#" data-toggle="modal" data-target="#exampleCompare">
-                                                <i class="fa fa-exchange"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-wrapper">
-                                    <div class="product-img">
-                                        <a href="product-details.html">
-                                            <img class="primary-image" alt="" src="/Assets/client/img/product/pro-5.jpg">
-                                            <img class="secondary-image" alt="" src="/Assets/client/img/product/pro-8.jpg">
-                                        </a>
-                                        <div class="quick-view">
-                                            <a class="action-view" title="Quick View" data-toggle="modal" data-target="#productModal" href="#">
-                                                Quick View
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content text-center">
-                                        <h4>
-                                            <a href="product-details.html">Elementum felis</a>
-                                        </h4>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="product-price-wrapper">
-                                            <span>£120.00</span>
-                                        </div>
-                                        <div class="product-action text-center">
-                                            <a class="action-cart" href="#"> Add to Cart <img class="secondary-image" alt="" src="/Assets/client/img/icon-img/cart-2.png"></a>
-                                            <a data-tooltip="Wishlist" class="action-wishlist tooltip-coustom" href="#">
-                                                <i class="fa fa-heart"></i>
-                                            </a>
-                                            <a data-tooltip="Compare" class="action-compare tooltip-coustom" href="#" data-toggle="modal" data-target="#exampleCompare">
-                                                <i class="fa fa-exchange"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-wrapper">
-                                    <div class="product-img">
-                                        <a href="product-details.html">
-                                            <img class="primary-image" alt="" src="/Assets/client/img/product/pro-1.jpg">
-                                            <img class="secondary-image" alt="" src="/Assets/client/img/product/pro-2.jpg">
-                                        </a>
-                                        <span class="sale-text">Sale</span>
-                                        <div class="quick-view">
-                                            <a class="action-view" title="Quick View" data-toggle="modal" data-target="#productModal" href="#">
-                                                Quick View
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content text-center">
-                                        <h4>
-                                            <a href="product-details.html">Ornare consequat</a>
-                                        </h4>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="product-price-wrapper">
-                                            <span>£120.00</span>
-                                        </div>
-                                        <div class="product-action text-center">
-                                            <a class="action-cart" href="#"> Add to Cart <img class="secondary-image" alt="" src="/Assets/client/img/icon-img/cart-2.png"></a>
-                                            <a data-tooltip="Wishlist" class="action-wishlist tooltip-coustom" href="#">
-                                                <i class="fa fa-heart"></i>
-                                            </a>
-                                            <a data-tooltip="Compare" class="action-compare tooltip-coustom" href="#" data-toggle="modal" data-target="#exampleCompare">
-                                                <i class="fa fa-exchange"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                }
                             </div>
                         </div>
                         <div id="home2" class="tab-pane">

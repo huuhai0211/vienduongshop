@@ -92,6 +92,10 @@
     <Compile Include="Migrations\201809270958163_fixnullproduct.Designer.cs">
       <DependentUpon>201809270958163_fixnullproduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810020531204_fixContributorID.cs" />
+    <Compile Include="Migrations\201810020531204_fixContributorID.Designer.cs">
+      <DependentUpon>201810020531204_fixContributorID.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ContributorRepository.cs" />
@@ -155,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809270958163_fixnullproduct.resx">
       <DependentUpon>201809270958163_fixnullproduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810020531204_fixContributorID.resx">
+      <DependentUpon>201810020531204_fixContributorID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

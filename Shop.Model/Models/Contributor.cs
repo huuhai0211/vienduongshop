@@ -10,6 +10,7 @@ namespace Shop.Model.Models
     public class Contributor
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID_Business { get; set; }
 
         [Required]     

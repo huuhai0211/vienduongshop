@@ -4677,12 +4677,6 @@
     <Content Include="Assets\admin\libs\angular-sanitize\LICENSE.md" />
     <Content Include="Assets\admin\libs\angular-sanitize\package.json" />
     <Content Include="Assets\admin\libs\angular-sanitize\README.md" />
-    <Content Include="Assets\admin\libs\angular-ui-router\.bower.json" />
-    <Content Include="Assets\admin\libs\angular-ui-router\bower.json" />
-    <Content Include="Assets\admin\libs\angular-ui-router\CHANGELOG.md" />
-    <Content Include="Assets\admin\libs\angular-ui-router\CONTRIBUTING.md" />
-    <Content Include="Assets\admin\libs\angular-ui-router\LICENSE" />
-    <Content Include="Assets\admin\libs\angular-ui-router\README.md" />
     <Content Include="Assets\admin\libs\angular-ui-select\.bower.json" />
     <Content Include="Assets\admin\libs\angular-ui-select\bower.json" />
     <Content Include="Assets\admin\libs\angular-ui-select\CHANGELOG.md" />
@@ -4948,6 +4942,12 @@
     <Content Include="Assets\client\fonts\Pe-icon-7-strokebb1d.ttf" />
     <Content Include="Assets\client\fonts\Pe-icon-7-strokebb1d.woff" />
     <Content Include="Assets\client\fonts\Pe-icon-7-stroked41d.eot" />
+    <Content Include="Assets\admin\libs\angular-ui-router\.bower.json" />
+    <Content Include="Assets\admin\libs\angular-ui-router\bower.json" />
+    <Content Include="Assets\admin\libs\angular-ui-router\CHANGELOG.md" />
+    <Content Include="Assets\admin\libs\angular-ui-router\CONTRIBUTING.md" />
+    <Content Include="Assets\admin\libs\angular-ui-router\LICENSE" />
+    <Content Include="Assets\admin\libs\angular-ui-router\README.md" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
