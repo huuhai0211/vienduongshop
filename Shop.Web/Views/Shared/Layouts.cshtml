@@ -62,30 +62,7 @@
 <body>
     @{ Html.RenderAction("Header", "Home");}
     @RenderBody()
-    <div class="brand-logo-area mb-30">
-        <div class="container">
-            <div class="brand-logo-active owl-carousel nav-style">
-                <div class="single-brand-logo">
-                    <a href="#"><img src="/Assets/client/img/brand-logo/brand-1.png" alt=""></a>
-                </div>
-                <div class="single-brand-logo">
-                    <a href="#"><img src="/Assets/client/img/brand-logo/brand-2.png" alt=""></a>
-                </div>
-                <div class="single-brand-logo">
-                    <a href="#"><img src="/Assets/client/img/brand-logo/brand-3.png" alt=""></a>
-                </div>
-                <div class="single-brand-logo">
-                    <a href="#"><img src="/Assets/client/img/brand-logo/brand-4.png" alt=""></a>
-                </div>
-                <div class="single-brand-logo">
-                    <a href="#"><img src="/Assets/client/img/brand-logo/brand-2.png" alt=""></a>
-                </div>
-                <div class="single-brand-logo">
-                    <a href="#"><img src="/Assets/client/img/brand-logo/brand-4.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     @{ Html.RenderAction("Footer", "Home");}
     
     <!-- Modal -->
@@ -179,7 +156,7 @@
                                     <tr>
                                         <th></th>
                                         <th>
-                                            <a href="#">Remove <span>x</span></a>
+                                            @*<a href="#">Remove <span>x</span></a>*@
                                             <img src="/Assets/client/img/product/compare-1.jpg" alt="">
                                             <p>Phantom Remote Control Ver 2018</p>
                                             <span>$75.99</span>

@@ -67,11 +67,11 @@
                 <div class="product-area mb-20">
                     <div class="product-tab-list mb-30 nav" role="tablist">
                         <a class="active" data-toggle="tab" href="#home1">
-                            <h4>Bán chạy</h4>
-                        </a>
-                        <a data-toggle="tab" href="#home2">
                             <h4>Mới</h4>
                         </a>
+                        @*<a data-toggle="tab" href="#home2">
+                            <h4>Mới</h4>
+                        </a>*@
                         @*<a data-toggle="tab" href="#home3">
                             <h4>Sale off</h4>
                         </a>*@
@@ -88,7 +88,10 @@
                                                 <img class="primary-image img-responsive" style="height: 193px" alt="" src="@product.Image">
                                                 @*<img class="secondary-image" alt="" src="/Assets/client/img/product/pro-1.jpg">*@
                                             </a>
-                                            <span class="sale-text">Sale</span>
+                                            @if (product.PromotionPrice != 0)
+                                            {
+                                                <span class="sale-text">Sale</span>
+                                            }
                                             <div class="quick-view">
                                                 <a class="action-view" title="Quick View" data-toggle="modal" data-target="#productModal" href="#">
                                                     Quick View
@@ -96,26 +99,26 @@
                                             </div>
                                         </div>
                                         <div class="product-content text-center">
-                                            <h4>
+                                            <h4 style="height:36px;">
                                                 <a href="product-details.html">@product.Name</a>
                                             </h4>
-                                            <div class="product-rating">
+                                            @*<div class="product-rating">
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
-                                            </div>
+                                            </div>*@
                                             <div class="product-price-wrapper">
-                                                <span class="product-price-old">@product.PromotionPrice</span>
+                                                <span class="product-price-old">@if (product.PromotionPrice != 0) { @product.PromotionPrice; }  </span>
                                                 <span>@product.Price</span>
                                             </div>
                                             <div class="product-action text-center">
                                                 <a class="action-cart" href="#"> Thêm vào giỏ @*<img class="secondary-image" alt="" src="@product.Image">*@</a>
-                                                <a data-tooltip="Wishlist" class="action-wishlist tooltip-coustom" href="#">
+                                                @*<a data-tooltip="Wishlist" class="action-wishlist tooltip-coustom" href="#">
                                                     <i class="fa fa-heart"></i>
-                                                </a>
-                                                <a data-tooltip="Compare" class="action-compare tooltip-coustom" href="#" data-toggle="modal" data-target="#exampleCompare">
+                                                </a>*@
+                                                <a data-tooltip="Chi tiết" class="action-compare tooltip-coustom" href="#" data-toggle="modal" data-target="#exampleCompare">
                                                     <i class="fa fa-exchange"></i>
                                                 </a>
                                             </div>
@@ -124,7 +127,7 @@
                                 }
                             </div>
                         </div>
-                        <div id="home2" class="tab-pane">
+                        @*<div id="home2" class="tab-pane">
                             <div class="product-slider-active-2 owl-carousel">
                                 <div class="product-wrapper">
                                     <div class="product-img">
@@ -511,7 +514,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>*@
                     </div>
                 </div>
                 @*<div class="single-banner mb-30">
@@ -525,7 +528,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-xl-9 col-md-12">
                             <div class="section-title mb-25">
-                                <h3>New Products</h3>
+                                <h3>Bảng điện tàu thủy</h3>
                             </div>
                             <div class="row">
                                 <div class="col-lg-3 col-md-6 col-sm-6 mb-12">
@@ -797,7 +800,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-12 col-xl-3 col-md-12">
+                        @*<div class="col-lg-12 col-xl-3 col-md-12">
                             <div class="custom-block-area">
                                 <div class="section-title mb-25">
                                     <h3>Custom Block</h3>
@@ -835,7 +838,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>*@
                     </div>
                 </div>
             </div>
