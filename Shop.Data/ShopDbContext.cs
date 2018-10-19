@@ -39,6 +39,18 @@ namespace Shop.Data
         public DbSet<Error> Errors { get; set; }
         public DbSet<Contributor> Contributors { get; set; }
 
+        public DbSet<Warehouse> Warehouses { get; set; }
+
+        public DbSet<Location> Locations { get; set; }
+
+        public DbSet<ApplicationGroup> ApplicationGroups { get; set; }
+
+        public DbSet<ApplicationRole> ApplicationRoles { get; set; }
+
+        public DbSet<ApplicationRoleGroup> ApplicationRoleGroups { get; set; }
+
+        public DbSet<ApplicationUserGroup> ApplicationUserGroups { get; set; }
+
         public static ShopDbContext Create()
         {
             return new ShopDbContext();
@@ -46,8 +58,10 @@ namespace Shop.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<IdentityUserRole>().HasKey(i => new {i.UserId, i.RoleId });
-            modelBuilder.Entity<IdentityUserLogin>().HasKey(i => i.UserId);
+            modelBuilder.Entity<IdentityUserRole>().HasKey(i => new {i.UserId, i.RoleId }).ToTable("ApplicationUserRoles");
+            modelBuilder.Entity<IdentityUserLogin>().HasKey(i => i.UserId).ToTable("ApplicationUserLogins");
+            modelBuilder.Entity<IdentityRole>().ToTable("ApplicationRoles");
+            modelBuilder.Entity<IdentityUserClaim>().HasKey(i => i.UserId).ToTable("ApplicationUserClaims");
         }
     }
 }

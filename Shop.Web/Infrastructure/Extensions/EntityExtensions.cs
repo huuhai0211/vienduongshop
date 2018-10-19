@@ -1,5 +1,6 @@
 ﻿using Shop.Model.Models;
 using Shop.Web.Models;
+using System;
 
 namespace Shop.Web.Infrastructure.Extensions
 {
@@ -105,6 +106,48 @@ namespace Shop.Web.Infrastructure.Extensions
             contributor.UpdatedDate = contributorViewModel.UpdatedDate;
             contributor.UpdatedBy = contributorViewModel.UpdatedBy;
             contributor.Status = contributorViewModel.Status;
+        }
+
+        public static void UpdateWarehouse(this Warehouse warehouse, WarehouseViewModel warehouseViewModel)
+        {
+            warehouse.ID = warehouseViewModel.ID;
+            warehouse.Name = warehouseViewModel.Name;
+            warehouse.Address = warehouseViewModel.Address;
+            warehouse.PhoneNumber = warehouseViewModel.PhoneNumber;
+            warehouse.Manager = warehouseViewModel.Manager;
+            warehouse.Note = warehouseViewModel.Note;
+            warehouse.CreatedDate = warehouseViewModel.CreatedDate;
+            warehouse.CreatedBy = warehouseViewModel.CreatedBy;
+            warehouse.UpdatedDate = warehouseViewModel.UpdatedDate;
+            warehouse.UpdatedBy = warehouseViewModel.UpdatedBy;
+            warehouse.Status = warehouseViewModel.Status;
+
+        }
+
+        public static void UpdateApplicationGroup(this ApplicationGroup appGroup, ApplicationGroupViewModel appGroupViewModel)
+        {
+            appGroup.ID = appGroupViewModel.ID;
+            appGroup.Name = appGroupViewModel.Name;
+        }
+
+        public static void UpdateApplicationRole(this ApplicationRole appRole, ApplicationRoleViewModel appRoleViewModel, string action = "add")
+        {
+            if (action == "update")
+                appRole.Id = appRoleViewModel.Id;
+            else
+                appRole.Id = Guid.NewGuid().ToString();
+            appRole.Name = appRoleViewModel.Name;
+            appRole.Description = appRoleViewModel.Description;
+        }
+        public static void UpdateUser(this ApplicationUser appUser, ApplicationUserViewModel appUserViewModel, string action = "add")
+        {
+
+            appUser.Id = appUserViewModel.Id;
+            appUser.FullName = appUserViewModel.FullName;
+            appUser.BirthDay = appUserViewModel.BirthDay;
+            appUser.Email = appUserViewModel.Email;
+            appUser.UserName = appUserViewModel.UserName;
+            appUser.PhoneNumber = appUserViewModel.PhoneNumber;
         }
     }
 }

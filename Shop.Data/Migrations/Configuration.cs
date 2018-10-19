@@ -13,12 +13,12 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Shop.Data.ShopDbContext context)
         {
-            //CreateAdmin(context);
+            CreateAdmin(context);
             //CreateSlide(context);
             
         }

@@ -228,12 +228,16 @@
         </div>
     </div>
     <!-- all js here -->
-    <script src="/Assets/client/js/vendor/jquery-1.12.0.min.js"></script>
+    @*<script src="/Assets/client/js/vendor/jquery-1.12.0.min.js"></script>*@
+    <script src="~/Assets/admin/libs/jquery/dist/jquery.js"></script>
+    @*<script src="~/Assets/client/js/jquery-1.7.1.min.js"></script>*@
     <script src="/Assets/client/js/popper.js"></script>
     <script src="/Assets/client/js/bootstrap.min.js"></script>
     <script src="/Assets/client/js/ajax-mail.js"></script>
     <script src="/Assets/client/js/owl.carousel.min.js"></script>
     <script src="/Assets/client/js/plugins.js"></script>
     <script src="/Assets/client/js/main.js"></script>
+    <script src="~/Assets/admin/libs/mustache/mustache.js"></script>
+    @RenderSection("footerJS", required: false)
 </body>
 </html>

@@ -96,13 +96,34 @@
     <Compile Include="Migrations\201810020531204_fixContributorID.Designer.cs">
       <DependentUpon>201810020531204_fixContributorID.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810160838307_addWarehouseTable.cs" />
+    <Compile Include="Migrations\201810160838307_addWarehouseTable.Designer.cs">
+      <DependentUpon>201810160838307_addWarehouseTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810171324040_AddLocationTable.cs" />
+    <Compile Include="Migrations\201810171324040_AddLocationTable.Designer.cs">
+      <DependentUpon>201810171324040_AddLocationTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810190758510_RenameIdentityTable.cs" />
+    <Compile Include="Migrations\201810190758510_RenameIdentityTable.Designer.cs">
+      <DependentUpon>201810190758510_RenameIdentityTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810190827255_AddGroupUser.cs" />
+    <Compile Include="Migrations\201810190827255_AddGroupUser.Designer.cs">
+      <DependentUpon>201810190827255_AddGroupUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ApplicationGroupRepository.cs" />
+    <Compile Include="Repositories\ApplicationRoleGroupRepository.cs" />
+    <Compile Include="Repositories\ApplicationRoleRepository.cs" />
+    <Compile Include="Repositories\ApplicationUserGroupRepository.cs" />
     <Compile Include="Repositories\ContributorRepository.cs" />
     <Compile Include="Repositories\ErrorRepository.cs" />
     <Compile Include="Repositories\FooterRepository.cs" />
     <Compile Include="Repositories\ImportDetailRepository.cs" />
     <Compile Include="Repositories\ImportRepository.cs" />
+    <Compile Include="Repositories\LocationRepository.cs" />
     <Compile Include="Repositories\MenuGroupRepository.cs" />
     <Compile Include="Repositories\MenuRepository.cs" />
     <Compile Include="Repositories\OrderDetailRepository.cs" />
@@ -119,6 +140,7 @@
     <Compile Include="Repositories\SystemConfigRepository.cs" />
     <Compile Include="Repositories\TagRepository.cs" />
     <Compile Include="Repositories\VisitorStatisticRepository.cs" />
+    <Compile Include="Repositories\WarehouseRepository.cs" />
     <Compile Include="ShopDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +184,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810020531204_fixContributorID.resx">
       <DependentUpon>201810020531204_fixContributorID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810160838307_addWarehouseTable.resx">
+      <DependentUpon>201810160838307_addWarehouseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810171324040_AddLocationTable.resx">
+      <DependentUpon>201810171324040_AddLocationTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810190758510_RenameIdentityTable.resx">
+      <DependentUpon>201810190758510_RenameIdentityTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810190827255_AddGroupUser.resx">
+      <DependentUpon>201810190827255_AddGroupUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

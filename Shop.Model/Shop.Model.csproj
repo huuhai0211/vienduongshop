@@ -55,12 +55,17 @@
   <ItemGroup>
     <Compile Include="Abstract\Auditable.cs" />
     <Compile Include="Abstract\IAuditable.cs" />
+    <Compile Include="Models\ApplicationGroup.cs" />
+    <Compile Include="Models\ApplicationRole.cs" />
+    <Compile Include="Models\ApplicationRoleGroup.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\ApplicationUserGroup.cs" />
     <Compile Include="Models\Contributor.cs" />
     <Compile Include="Models\Error.cs" />
     <Compile Include="Models\Footer.cs" />
     <Compile Include="Models\Import.cs" />
     <Compile Include="Models\ImportDetail.cs" />
+    <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\MenuGroup.cs" />
     <Compile Include="Models\Order.cs" />
@@ -77,6 +82,7 @@
     <Compile Include="Models\SystemConfig.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Models\VisitorStatistic.cs" />
+    <Compile Include="Models\Warehouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

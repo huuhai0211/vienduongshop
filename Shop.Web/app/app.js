@@ -2,10 +2,13 @@
 (function () {
     angular.module('shop', [
         'shop.products',
+        'shop.application_groups',
         'shop.product_categories',
-        'shop.common',
-        'shop.contributor'
-    ]).config(config)
+        'shop.application_roles',
+        'shop.application_users',
+        'shop.contributor',
+        'shop.common'])
+    .config(config)
     .config(configAuthentication);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];

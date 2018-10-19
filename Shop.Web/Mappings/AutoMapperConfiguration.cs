@@ -19,6 +19,9 @@ namespace Shop.Web.Mappings
             Mapper.CreateMap<Product, ProductViewModel>();
             Mapper.CreateMap<Footer, FooterViewModel>();
             Mapper.CreateMap<Contributor, ContributorViewModel>();
+            Mapper.CreateMap<ApplicationGroup, ApplicationGroupViewModel>();
+            Mapper.CreateMap<ApplicationRole, ApplicationRoleViewModel>();
+            Mapper.CreateMap<ApplicationUser, ApplicationUserViewModel>();
         }
     }
 }

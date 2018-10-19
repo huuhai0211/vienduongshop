@@ -22,7 +22,10 @@ namespace Shop.Web.Controllers
         // GET: ShoppingCart
         public ActionResult Index()
         {
-            Session[CommonConstants.SessionCart] = new List<ShoppingCartViewModel>();
+            if(Session[CommonConstants.SessionCart] == null)
+            {
+                Session[CommonConstants.SessionCart] = new List<ShoppingCartViewModel>();
+            }
             return View();
         }
 
@@ -32,6 +35,7 @@ namespace Shop.Web.Controllers
             return Json(new
             {
                 data = cart,
+                status = true
             }, JsonRequestBehavior.AllowGet);
         }
 
@@ -39,6 +43,10 @@ namespace Shop.Web.Controllers
         public JsonResult Add(int productId)
         {
             var cart = (List<ShoppingCartViewModel>)Session[CommonConstants.SessionCart];
+            if(cart == null)
+            {
+                cart = new List<ShoppingCartViewModel>();
+            }
             if(cart.Any(x => x.ProductId == productId))
             {
                 foreach( var item in cart)
@@ -58,6 +66,7 @@ namespace Shop.Web.Controllers
                 var product = _productService.GetById(productId);
                 newItem.Product = Mapper.Map<Product, ProductViewModel>(product);
                 newItem.Quantity = 1;
+                cart.Add(newItem);
             }
 
             Session[CommonConstants.SessionCart] = cart;

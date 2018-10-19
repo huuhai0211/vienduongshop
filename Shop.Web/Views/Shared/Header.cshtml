@@ -30,7 +30,8 @@
                 <div class="col-lg-4 col-md-12 col-12">
                     <div class="logo">
                         <a href="index.html">
-                            <img alt="" src="/assets/client/img/logo/logo.png">
+                            @*<img alt="" src="/assets/client/img/logo/logo.png">*@
+                            <h2>VIỄN DƯƠNG  </h2>
                         </a>
                     </div>
                 </div>
@@ -72,14 +73,17 @@
                         </div>
                         <div class="header-cart-wrap">
                             <div class="header-cart-icon">
-                                <a class="icon-cart" href="#">
+                                <a href="@Url.Action("index", "ShoppingCart")">
                                     <img alt="" src="/assets/client/img/icon-img/cart.png">
                                     <div class="cart-text">
                                         <span class="">Giỏ hàng</span>
-                                        <span>02</span>
+                                        @*<span>02</span>*@
                                     </div>
                                 </a>
-                                <div class="shopping-cart-content">
+                                @*<a class="icon-cart" href="#">
+                                    
+                                </a>*@
+                                @*<div class="shopping-cart-content">
                                     <ul>
                                         <li class="single-shopping-cart">
                                             <div class="shopping-cart-img">
@@ -115,7 +119,7 @@
                                         <a href="checkout.html">checkout</a>
                                         @Html.ActionLink("checkout", "index", "ShoppingCart", null, null)
                                     </div>
-                                </div>
+                                </div>*@
                             </div>
                         </div>
                     </div>
