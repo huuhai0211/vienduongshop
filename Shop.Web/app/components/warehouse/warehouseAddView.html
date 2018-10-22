@@ -1,0 +1,90 @@
+﻿<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Thêm mới danh mục kho
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li><a href="#">Quản lý kho</a></li>
+        <li><a ui-sref="warehouse">Danh mục kho</a></li>
+        <li class="active">Thêm mới</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!-- Horizontal Form -->
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Thêm mới</h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" novalidate name="frmAddWarehouse" role="form" ng-submit="AddWarehouse()">
+            <div class="box-body">
+                <!--<div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Mã danh mục</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="alias" ng-model="warehouse.ID">
+                    </div>
+                </div>-->
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Tên kho</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-maxlength="50" ng-change="GetSeoTitle()" required name="name" ng-model="warehouses.Name">
+                        <span ng-show="frmAddWarehouse.name.$invalid && frmAddWarehouse.name.$touched" class="has-error">Phải nhập tên danh mục</span>
+                        <span ng-show="frmAddWarehouse.name.$error.maxlength" class="has-error">Tên danh mục không quá 50 kí tự</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Địa chỉ</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="address" ng-model="warehouses.Address">
+                    </div>
+                </div>
+                <!--<div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label"></label>
+                    <div class="col-sm-10">
+                        <iframe class="form-control" style="padding: 12px, 6px; height:600px" src="https://docs.google.com/gview?url=http://ieee802.org/secmail/docIZSEwEqHFr.doc&embedded=true" frameborder="0"></iframe>
+                    </div>
+
+                </div>-->
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Số điện thoại</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="phonenumber" ng-model="warehouses.PhoneNumber">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Quản lý</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="manager" ng-model="warehouses.Manager">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Ghi chú</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="note" ng-model="warehouses.Note">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="status" ng-model="warehouses.Status" ng-checked="warehouses.Status"> Kích hoạt
+                            </label>
+                        </div>
+                        <div class="checkbox">
+
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+                <button ui-sref="warehouse" class="btn btn-default">Hủy</button>
+                <button type="submit" ng-disabled="frmAddWarehouse.$invalid" class="btn btn-success pull-right">Lưu</button>
+            </div><!-- /.box-footer -->
+        </form>
+    </div><!-- /.box -->
+</section><!-- /.content -->->

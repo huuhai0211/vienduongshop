@@ -5,6 +5,7 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li><a href="#">Danh mục quản lý</a></li>
         <li class="active">Nhà cung cấp</li>
     </ol>
 </section>
@@ -50,13 +51,16 @@
                         </tr>
                         <tr ng-repeat="item in contributor">
                             <td><input type="checkbox" ng-model="item.checked" name="all" /></td>
-                            <td>{{item.ID}}</td>
+                            <td>{{item.ID_Business}}</td>
                             <td>{{item.Name}}</td>
+                            <td>{{item.Address}}</td>
+                            <td>{{item.Phone_Number}}</td>
+                            <td>{{item.Email}}</td>
                             <td>{{item.CreatedDate | date:'dd/MM/yyyy hh:mm:ss'}}</td>
                             <td><span ng-class="{'badge bg-red': item.Status == false, 'badge bg-green': item.Status == true}">{{item.Status | statusFilter}}</span></td>
                             <td>
-                                <button class="btn btn-sm btn-primary" ui-sref="edit_product_category({id:item.ID})"><i class="fa fa-pencil"></i></button>
-                                <button class="btn btn-sm btn-danger" ng-click="deleteProductCategory(item.ID)"><i class="fa fa-trash"></i></button>
+                                <button class="btn btn-sm btn-primary" ui-sref="edit_contributor({id:item.ID_Business})"><i class="fa fa-pencil"></i></button>
+                                <button class="btn btn-sm btn-danger" ng-click="deleteContributor(item.ID_Business)"><i class="fa fa-trash"></i></button>
                             </td>
                         </tr>
                         <tfoot>

@@ -60,6 +60,7 @@
     <Compile Include="Models\ApplicationRoleGroup.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ApplicationUserGroup.cs" />
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Contributor.cs" />
     <Compile Include="Models\Error.cs" />
     <Compile Include="Models\Footer.cs" />

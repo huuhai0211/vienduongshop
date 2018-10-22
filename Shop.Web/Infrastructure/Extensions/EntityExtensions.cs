@@ -107,7 +107,22 @@ namespace Shop.Web.Infrastructure.Extensions
             contributor.UpdatedBy = contributorViewModel.UpdatedBy;
             contributor.Status = contributorViewModel.Status;
         }
-
+        public static void UpdateClient(this Client client, ClientViewModel clientViewModel)
+        {
+            client.ID = clientViewModel.ID;
+            client.Name = clientViewModel.Name;
+            client.Gender = clientViewModel.Gender;
+            client.Birthday = clientViewModel.Birthday;
+            client.Address = clientViewModel.Address;
+            client.Phone_Number = clientViewModel.Phone_Number;
+            client.Email = clientViewModel.Email;
+            client.Note = clientViewModel.Note;
+            client.CreatedDate = clientViewModel.CreatedDate;
+            client.CreatedBy = clientViewModel.CreatedBy;
+            client.UpdatedDate = clientViewModel.UpdatedDate;
+            client.UpdatedBy = clientViewModel.UpdatedBy;
+            client.Status = clientViewModel.Status;
+        }
         public static void UpdateWarehouse(this Warehouse warehouse, WarehouseViewModel warehouseViewModel)
         {
             warehouse.ID = warehouseViewModel.ID;

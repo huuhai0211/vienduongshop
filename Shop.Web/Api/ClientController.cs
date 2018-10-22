@@ -14,15 +14,15 @@ using System.Web.Script.Serialization;
 
 namespace Shop.Web.Api
 {
-    [RoutePrefix("api/contributor")]
-    //[Authorize]
-    public class ContributorController : ApiControllerBase
+    [RoutePrefix("api/client")]
+    public class ClientController : ApiControllerBase
     {
-        private IContributorService _contributorService;
 
-        public ContributorController(IErrorService errorService, IContributorService contributorService) : base(errorService)
+        private IClientService _clientService;
+
+        public ClientController(IErrorService errorService, IClientService clientService) : base(errorService)
         {
-            this._contributorService = contributorService;
+            this._clientService = clientService;
         }
 
         [Route("getbyid/{id:int}")]
@@ -31,8 +31,8 @@ namespace Shop.Web.Api
         {
             return CreateHttpResponse(request, () =>
             {
-                var model = _contributorService.GetById(id);
-                var responseData = Mapper.Map<Contributor, ContributorViewModel>(model);
+                var model = _clientService.GetById(id);
+                var responseData = Mapper.Map<Client, ClientViewModel>(model);
 
                 HttpResponseMessage response = request.CreateResponse(HttpStatusCode.OK, responseData);
 
@@ -46,11 +46,11 @@ namespace Shop.Web.Api
         {
             return CreateHttpResponse(request, () =>
             {
-                var model = _contributorService.GetAll(keyword);
+                var model = _clientService.GetAll(keyword);
                 int totalRow = model.Count();
                 var query = model.OrderByDescending(x => x.CreatedDate).Skip(page * pageSize).Take(pageSize);
-                var responseData = Mapper.Map<IEnumerable<Contributor>, IEnumerable<ContributorViewModel>>(query);
-                var paginationSet = new PaginationSet<ContributorViewModel>()
+                var responseData = Mapper.Map<IEnumerable<Client>, IEnumerable<ClientViewModel>>(query);
+                var paginationSet = new PaginationSet<ClientViewModel>()
                 {
                     Items = responseData,
                     Page = page,
@@ -64,7 +64,7 @@ namespace Shop.Web.Api
         }
         [Route("create")]
         [HttpPost]
-        public HttpResponseMessage Create(HttpRequestMessage request, ContributorViewModel contributorViewModel)
+        public HttpResponseMessage Create(HttpRequestMessage request, ClientViewModel clientViewModel)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -75,14 +75,14 @@ namespace Shop.Web.Api
                 }
                 else
                 {
-                    var newContributor = new Contributor();
-                    newContributor.UpdateContributor(contributorViewModel);
-                    newContributor.CreatedDate = DateTime.Now;
-                    newContributor.CreatedBy = User.Identity.Name;
-                    _contributorService.Add(newContributor);
-                    _contributorService.Save();
+                    var newClient = new Client();
+                    newClient.UpdateClient(clientViewModel);
+                    newClient.CreatedDate = DateTime.Now;
+                    newClient.CreatedBy = User.Identity.Name;
+                    _clientService.Add(newClient);
+                    _clientService.Save();
 
-                    var responseData = Mapper.Map<Contributor, ContributorViewModel>(newContributor);
+                    var responseData = Mapper.Map<Client, ClientViewModel>(newClient);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
                 }
 
@@ -92,7 +92,7 @@ namespace Shop.Web.Api
 
         [Route("update")]
         [HttpPut]
-        public HttpResponseMessage Update(HttpRequestMessage request, ContributorViewModel contributorViewModel)
+        public HttpResponseMessage Update(HttpRequestMessage request, ClientViewModel clientViewModel)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -103,14 +103,14 @@ namespace Shop.Web.Api
                 }
                 else
                 {
-                    var dbContributor = _contributorService.GetById(contributorViewModel.ID_Business);
-                    dbContributor.UpdateContributor(contributorViewModel);
-                    dbContributor.UpdatedDate = DateTime.Now;
-                    dbContributor.UpdatedBy = User.Identity.Name;
-                    _contributorService.Update(dbContributor);
-                    _contributorService.Save();
+                    var dbClient = _clientService.GetById(clientViewModel.ID);
+                    dbClient.UpdateClient(clientViewModel);
+                    dbClient.UpdatedDate = DateTime.Now;
+                    dbClient.UpdatedBy = User.Identity.Name;
+                    _clientService.Update(dbClient);
+                    _clientService.Save();
 
-                    var responseData = Mapper.Map<Contributor, ContributorViewModel>(dbContributor);
+                    var responseData = Mapper.Map<Client, ClientViewModel>(dbClient);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
 
                 }
@@ -132,10 +132,10 @@ namespace Shop.Web.Api
                 }
                 else
                 {
-                    var oldContributor = _contributorService.Delete(id);
-                    _contributorService.Save();
+                    var oldClient = _clientService.Delete(id);
+                    _clientService.Save();
 
-                    var responseData = Mapper.Map<Contributor, ContributorViewModel>(oldContributor);
+                    var responseData = Mapper.Map<Client, ClientViewModel>(oldClient);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
 
                 }
@@ -146,7 +146,7 @@ namespace Shop.Web.Api
 
         [Route("deletemulti")]
         [HttpDelete]
-        public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedContributor)
+        public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedClient)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -157,13 +157,13 @@ namespace Shop.Web.Api
                 }
                 else
                 {
-                    var listContributor = new JavaScriptSerializer().Deserialize<List<int>>(checkedContributor);
+                    var listClient = new JavaScriptSerializer().Deserialize<List<int>>(checkedClient);
 
-                    foreach (var item in listContributor)
+                    foreach (var item in listClient)
                     {
-                        _contributorService.Delete(item);
+                        _clientService.Delete(item);
                     }
-                    _contributorService.Save();
+                    _clientService.Save();
                     response = request.CreateResponse(HttpStatusCode.Created, true);
 
                 }

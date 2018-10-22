@@ -28,3 +28,4 @@
         }
     }
 })(angular.module('shop.contributor'));
+// ơ nó đâu? bạn có làm gì vào đâu

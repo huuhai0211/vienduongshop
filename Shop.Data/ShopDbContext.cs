@@ -38,7 +38,7 @@ namespace Shop.Data
 
         public DbSet<Error> Errors { get; set; }
         public DbSet<Contributor> Contributors { get; set; }
-
+        public DbSet<Client> Clients { get; set; } 
         public DbSet<Warehouse> Warehouses { get; set; }
 
         public DbSet<Location> Locations { get; set; }

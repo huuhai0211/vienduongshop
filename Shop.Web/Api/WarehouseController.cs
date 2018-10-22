@@ -81,7 +81,7 @@ namespace Shop.Web.Api
 
         [Route("create")]
         [HttpPost]
-        public HttpResponseMessage Create(HttpRequestMessage request, WarehouseViewModel productCategoryViewModel)
+        public HttpResponseMessage Create(HttpRequestMessage request, WarehouseViewModel warehouseViewModel)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -93,7 +93,7 @@ namespace Shop.Web.Api
                 else
                 {
                     var newWarehouse = new Warehouse();
-                    newWarehouse.UpdateWarehouse(productCategoryViewModel);
+                    newWarehouse.UpdateWarehouse(warehouseViewModel);
                     newWarehouse.CreatedDate = DateTime.Now;
                     _warehouseService.Add(newWarehouse);
                     _warehouseService.Save();
@@ -109,7 +109,7 @@ namespace Shop.Web.Api
 
         [Route("update")]
         [HttpPut]
-        public HttpResponseMessage Update(HttpRequestMessage request, WarehouseViewModel productCategoryViewModel)
+        public HttpResponseMessage Update(HttpRequestMessage request, WarehouseViewModel warehouseViewModel)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -120,8 +120,8 @@ namespace Shop.Web.Api
                 }
                 else
                 {
-                    var dbWarehouse = _warehouseService.GetById(productCategoryViewModel.ID);
-                    dbWarehouse.UpdateWarehouse(productCategoryViewModel);
+                    var dbWarehouse = _warehouseService.GetById(warehouseViewModel.ID);
+                    dbWarehouse.UpdateWarehouse(warehouseViewModel);
                     dbWarehouse.UpdatedDate = DateTime.Now;
                     _warehouseService.Update(dbWarehouse);
                     _warehouseService.Save();
@@ -166,7 +166,7 @@ namespace Shop.Web.Api
 
         [Route("deletemulti")]
         [HttpDelete]
-        public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedProductCategories)
+        public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedWarehouse)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -177,9 +177,9 @@ namespace Shop.Web.Api
                 }
                 else
                 {
-                    var listProductCategories = new JavaScriptSerializer().Deserialize<List<int>>(checkedProductCategories);
+                    var listWarehouse = new JavaScriptSerializer().Deserialize<List<int>>(checkedWarehouse);
 
-                    foreach (var item in listProductCategories)
+                    foreach (var item in listWarehouse)
                     {
                         _warehouseService.Delete(item);
                     }
