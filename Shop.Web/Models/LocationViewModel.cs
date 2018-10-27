@@ -11,7 +11,7 @@ namespace Shop.Web.Models
         
         public string Name { get; set; }
 
-        public int WarehouseID { get; set; }
+        public int WarehouseID { get; set; } //khác tên này
 
         public int ProductID { get; set; }
 

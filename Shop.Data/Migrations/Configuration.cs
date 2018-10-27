@@ -14,6 +14,7 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;// lúc vừa bạn thêm cái này này
         }
 
         protected override void Seed(Shop.Data.ShopDbContext context)

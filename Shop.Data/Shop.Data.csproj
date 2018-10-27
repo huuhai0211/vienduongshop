@@ -112,6 +112,10 @@
     <Compile Include="Migrations\201810190827255_AddGroupUser.Designer.cs">
       <DependentUpon>201810190827255_AddGroupUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810271323571_dsaddas.cs" />
+    <Compile Include="Migrations\201810271323571_dsaddas.Designer.cs">
+      <DependentUpon>201810271323571_dsaddas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ApplicationGroupRepository.cs" />
@@ -197,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810190827255_AddGroupUser.resx">
       <DependentUpon>201810190827255_AddGroupUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810271323571_dsaddas.resx">
+      <DependentUpon>201810271323571_dsaddas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

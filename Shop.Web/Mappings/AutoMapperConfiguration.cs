@@ -24,6 +24,7 @@ namespace Shop.Web.Mappings
             Mapper.CreateMap<ApplicationUser, ApplicationUserViewModel>();
             Mapper.CreateMap<Warehouse, WarehouseViewModel>();
             Mapper.CreateMap<Client, ClientViewModel>();
+            Mapper.CreateMap<Location, LocationViewModel>();
         }
     }
 }

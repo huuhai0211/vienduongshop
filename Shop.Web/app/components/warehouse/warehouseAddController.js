@@ -20,6 +20,15 @@
                 });
 
         }
+        //$scope.parentWare = [];
+        //function loadparentWare() {
+        //    apiService.get('api/warehouse/getallparents', null, function (result) {
+        //        $scope.parentWare = result.data;
+        //    }, function (error) {
+        //        console.log('Cannot get list parent');
+        //    });
+        //}
+        //loadparentWare();
 
         //$scope.GetSeoTitle = GetSeoTitle;
 
@@ -27,14 +36,6 @@
         //function GetSeoTitle() {
         //    $scope.warehouse.Alias = commonService.getSeoTitle($scope.warehouse.Name);
         //}
-        function loadWarehouse() {
-            apiService.get('api/warehouse/getallparents', null, function (result) {
-                $scope.warehouse = result.data;
-            }, function (error) {
-                console.log('Cannot get list parent');
-            });
-        }      
-       loadWarehouse();
-       
+        
     }
 })(angular.module('shop.warehouse'));
