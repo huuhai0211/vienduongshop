@@ -7,6 +7,8 @@
         'shop.application_roles',
         'shop.application_users',
         'shop.contributor',
+        'shop.warehouse',
+        'shop.locations',
         'shop.common'])
     .config(config)
     .config(configAuthentication);

@@ -19,7 +19,6 @@ using Shop.Model.Models;
 using Shop.Service;
 
 [assembly: OwinStartup(typeof(Shop.Web.App_Start.Startup))]
-
 namespace Shop.Web.App_Start
 {
     public partial class Startup

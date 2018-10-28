@@ -1,4 +1,5 @@
-﻿using Shop.Data.Infrastructure;
+﻿using Shop.Data;
+using Shop.Data.Infrastructure;
 using Shop.Data.Repositories;
 using Shop.Model.Models;
 using System.Collections.Generic;

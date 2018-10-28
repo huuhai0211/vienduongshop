@@ -16,10 +16,12 @@ using System.Web.Http;
 
 namespace Shop.Web.Api
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     [RoutePrefix("api/applicationUser")]
     public class ApplicationUserController : ApiControllerBase
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         private ApplicationUserManager _userManager;
         private IApplicationGroupService _appGroupService;
         private IApplicationRoleService _appRoleService;
@@ -36,7 +38,6 @@ namespace Shop.Web.Api
         }
         [Route("getlistpaging")]
         [HttpGet]
-        [Authorize(Roles = "ViewUser")]
         public HttpResponseMessage GetListPaging(HttpRequestMessage request, int page, int pageSize, string filter = null)
         {
             return CreateHttpResponse(request, () =>
@@ -62,7 +63,6 @@ namespace Shop.Web.Api
 
         [Route("detail/{id}")]
         [HttpGet]
-        [Authorize(Roles = "ViewUser")]
         public HttpResponseMessage Details(HttpRequestMessage request, string id)
         {
             if (string.IsNullOrEmpty(id))
@@ -87,7 +87,6 @@ namespace Shop.Web.Api
 
         [HttpPost]
         [Route("add")]
-        [Authorize(Roles = "AddUser")]
         public async Task<HttpResponseMessage> Create(HttpRequestMessage request, ApplicationUserViewModel applicationUserViewModel)
         {
             if (ModelState.IsValid)
@@ -119,7 +118,9 @@ namespace Shop.Web.Api
                         _appGroupService.AddUserToGroups(listAppUserGroup, newAppUser.Id);
                         _appGroupService.Save();
 
+                        var userName = User.Identity.Name;
 
+                        log.Info(userName + "thêm mới:" + applicationUserViewModel.UserName + ", " + applicationUserViewModel.BirthDay);
                         return request.CreateResponse(HttpStatusCode.OK, applicationUserViewModel);
 
                     }
@@ -143,7 +144,6 @@ namespace Shop.Web.Api
 
         [HttpPut]
         [Route("update")]
-        [Authorize(Roles = "UpdateUser")]
         public async Task<HttpResponseMessage> Update(HttpRequestMessage request, ApplicationUserViewModel applicationUserViewModel)
         {
             if (ModelState.IsValid)
@@ -192,7 +192,6 @@ namespace Shop.Web.Api
 
         [HttpDelete]
         [Route("delete")]
-        [Authorize(Roles = "DeleteUser")]
         public async Task<HttpResponseMessage> Delete(HttpRequestMessage request, string id)
         {
             var appUser = await _userManager.FindByIdAsync(id);

@@ -38,7 +38,7 @@ namespace Shop.Service
         }
         public ApplicationRole Add(ApplicationRole appRole)
         {
-            if (_appRoleRepository.CheckContains(x => x.Description == appRole.Description))
+            if (_appRoleRepository.CheckContains(x => x.Name == appRole.Name))
                 throw new NameDuplicatedException("Tên không được trùng");
             return _appRoleRepository.Add(appRole);
         }

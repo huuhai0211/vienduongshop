@@ -23,7 +23,7 @@
         }
         function addFailed(response) {
             notificationService.displayError(response.data.Message);
-            notificationService.displayErrorValidation(response);
+            //notificationService.displayErrorValidation(response);
         }
 
         function loadRoles() {

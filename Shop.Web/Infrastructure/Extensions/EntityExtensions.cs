@@ -124,6 +124,22 @@ namespace Shop.Web.Infrastructure.Extensions
 
         }
 
+        public static void UpdateLocation(this Location location, LocationViewModel locationViewModel)
+        {
+            location.ID = locationViewModel.ID;
+            location.Name = locationViewModel.Name;
+            location.WarehouseID = locationViewModel.WarehouseID;
+            location.ProductID = locationViewModel.ProductID;
+            location.MaximumQuantity = locationViewModel.MaximumQuantity;
+            location.Note = locationViewModel.Note;
+            location.CreatedDate = locationViewModel.CreatedDate;
+            location.CreatedBy = locationViewModel.CreatedBy;
+            location.UpdatedDate = locationViewModel.UpdatedDate;
+            location.UpdatedBy = locationViewModel.UpdatedBy;
+            location.Status = locationViewModel.Status;
+
+        }
+
         public static void UpdateApplicationGroup(this ApplicationGroup appGroup, ApplicationGroupViewModel appGroupViewModel)
         {
             appGroup.ID = appGroupViewModel.ID;

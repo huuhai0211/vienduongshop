@@ -18,9 +18,10 @@ using System.Web.Script.Serialization;
 namespace Shop.Web.Api
 {
     [RoutePrefix("api/applicationGroup")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class ApplicationGroupController : ApiControllerBase
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private IApplicationGroupService _appGroupService;
         private IApplicationRoleService _appRoleService;
         private ApplicationUserManager _userManager;
