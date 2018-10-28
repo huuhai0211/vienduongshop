@@ -9,21 +9,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web;
 using System.Web.Http;
 using System.Web.Script.Serialization;
 
 namespace Shop.Web.Api
 {
-    [RoutePrefix("api/location")]
-    [Authorize]
-    public class LocationController : ApiControllerBase
+    [RoutePrefix("api/client")]
+    public class ClientController : ApiControllerBase
     {
-        private ILocationService _locationService;
 
-        public LocationController(IErrorService errorService, ILocationService locationService) : base(errorService)
+        private IClientService _clientService;
+
+        public ClientController(IErrorService errorService, IClientService clientService) : base(errorService)
         {
-            this._locationService = locationService;
+            this._clientService = clientService;
         }
 
         [Route("getbyid/{id:int}")]
@@ -32,8 +31,8 @@ namespace Shop.Web.Api
         {
             return CreateHttpResponse(request, () =>
             {
-                var model = _locationService.GetById(id);
-                var responseData = Mapper.Map<Location, LocationViewModel>(model);
+                var model = _clientService.GetById(id);
+                var responseData = Mapper.Map<Client, ClientViewModel>(model);
 
                 HttpResponseMessage response = request.CreateResponse(HttpStatusCode.OK, responseData);
 
@@ -43,15 +42,15 @@ namespace Shop.Web.Api
 
         [Route("getall")]
         [HttpGet]
-        public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
+        public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 1)
         {
             return CreateHttpResponse(request, () =>
             {
-                var model = _locationService.GetAll(keyword);
+                var model = _clientService.GetAll(keyword);
                 int totalRow = model.Count();
                 var query = model.OrderByDescending(x => x.CreatedDate).Skip(page * pageSize).Take(pageSize);
-                var responseData = Mapper.Map<IEnumerable<Location>, IEnumerable<LocationViewModel>>(query);
-                var paginationSet = new PaginationSet<LocationViewModel>()
+                var responseData = Mapper.Map<IEnumerable<Client>, IEnumerable<ClientViewModel>>(query);
+                var paginationSet = new PaginationSet<ClientViewModel>()
                 {
                     Items = responseData,
                     Page = page,
@@ -63,26 +62,9 @@ namespace Shop.Web.Api
                 return response;
             });
         }
-
-        [Route("getallparents")]
-        [HttpGet]
-        public HttpResponseMessage GetAll(HttpRequestMessage request)
-        {
-            return CreateHttpResponse(request, () =>
-            {
-                var model = _locationService.GetAll();
-
-                var responseData = Mapper.Map<IEnumerable<Location>, IEnumerable<LocationViewModel>>(model);
-
-                var response = request.CreateResponse(HttpStatusCode.OK, responseData);
-                return response;
-            });
-        }
-
-
         [Route("create")]
         [HttpPost]
-        public HttpResponseMessage Create(HttpRequestMessage request, LocationViewModel locationViewModel)
+        public HttpResponseMessage Create(HttpRequestMessage request, ClientViewModel clientViewModel)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -93,14 +75,14 @@ namespace Shop.Web.Api
                 }
                 else
                 {
-                    var newLocation = new Location();
-                    newLocation.UpdateLocation(locationViewModel);
-                    newLocation.CreatedDate = DateTime.Now;
-                    newLocation.CreatedBy = User.Identity.Name;
-                    _locationService.Add(newLocation);
-                    _locationService.Save();
+                    var newClient = new Client();
+                    newClient.UpdateClient(clientViewModel);
+                    newClient.CreatedDate = DateTime.Now;
+                    newClient.CreatedBy = User.Identity.Name;
+                    _clientService.Add(newClient);
+                    _clientService.Save();
 
-                    var responseData = Mapper.Map<Location, LocationViewModel>(newLocation);
+                    var responseData = Mapper.Map<Client, ClientViewModel>(newClient);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
                 }
 
@@ -110,7 +92,7 @@ namespace Shop.Web.Api
 
         [Route("update")]
         [HttpPut]
-        public HttpResponseMessage Update(HttpRequestMessage request, LocationViewModel locationViewModel)
+        public HttpResponseMessage Update(HttpRequestMessage request, ClientViewModel clientViewModel)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -121,14 +103,14 @@ namespace Shop.Web.Api
                 }
                 else
                 {
-                    var dbLocation = _locationService.GetById(locationViewModel.ID);
-                    dbLocation.UpdateLocation(locationViewModel);
-                    dbLocation.UpdatedDate = DateTime.Now;
-                    dbLocation.UpdatedBy = User.Identity.Name;
-                    _locationService.Update(dbLocation);
-                    _locationService.Save();
+                    var dbClient = _clientService.GetById(clientViewModel.ID);
+                    dbClient.UpdateClient(clientViewModel);
+                    dbClient.UpdatedDate = DateTime.Now;
+                    dbClient.UpdatedBy = User.Identity.Name;
+                    _clientService.Update(dbClient);
+                    _clientService.Save();
 
-                    var responseData = Mapper.Map<Location, LocationViewModel>(dbLocation);
+                    var responseData = Mapper.Map<Client, ClientViewModel>(dbClient);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
 
                 }
@@ -150,14 +132,10 @@ namespace Shop.Web.Api
                 }
                 else
                 {
-                    var dbLocation = _locationService.GetById(id);
-                    dbLocation.Status = false;
-                    _locationService.Update(dbLocation);
-                    _locationService.Save();
-                    //var oldWarehouse =_warehouseService.Delete(id);
-                    //_warehouseService.Save();
+                    var oldClient = _clientService.Delete(id);
+                    _clientService.Save();
 
-                    var responseData = Mapper.Map<Location, LocationViewModel>(dbLocation);
+                    var responseData = Mapper.Map<Client, ClientViewModel>(oldClient);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
 
                 }
@@ -168,7 +146,7 @@ namespace Shop.Web.Api
 
         [Route("deletemulti")]
         [HttpDelete]
-        public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedLocation)
+        public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedClient)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -179,13 +157,13 @@ namespace Shop.Web.Api
                 }
                 else
                 {
-                    var listLocation = new JavaScriptSerializer().Deserialize<List<int>>(checkedLocation);
+                    var listClient = new JavaScriptSerializer().Deserialize<List<int>>(checkedClient);
 
-                    foreach (var item in listLocation)
+                    foreach (var item in listClient)
                     {
-                        _locationService.Delete(item);
+                        _clientService.Delete(item);
                     }
-                    _locationService.Save();
+                    _clientService.Save();
                     response = request.CreateResponse(HttpStatusCode.Created, true);
 
                 }
@@ -193,5 +171,6 @@ namespace Shop.Web.Api
                 return response;
             });
         }
+
     }
 }

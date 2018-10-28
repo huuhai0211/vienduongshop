@@ -21,7 +21,16 @@
                 });
 
         }
-    
+        //$scope.parentProduct = [];
+        //function loadparentProduct() {
+        //    apiService.get('api/product/getallparents', null, function (result) {
+        //        $scope.parentProduct = result.data;
+        //    }, function (error) {
+        //        console.log('Cannot get list parent');
+        //    });
+        //}
+        //loadparentProduct();
+
         $scope.GetSeoTitle = GetSeoTitle;
         
         $scope.ckeditorOptions = {
@@ -39,6 +48,7 @@
                 console.log('Cannot get list parent');
             });
         }
+        loadProductCategories();
         $scope.ChooseImage = function () {
             var finder = new CKFinder();
             finder.selectActionFunction = function (fileUrl) {
@@ -48,7 +58,7 @@
             }
             finder.popup();
         }
-        loadProductCategories();
+
 
         $scope.moreImages = [];
         $scope.ChooseMoreImage = function () {

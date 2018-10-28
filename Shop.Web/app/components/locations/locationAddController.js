@@ -8,8 +8,6 @@
         $scope.location = {
             Status: true
         }
-
-
         $scope.AddLocation = AddLocation;
        // $scope.GetSeoTitle = GetSeoTitle;
 

@@ -8,6 +8,7 @@
         'shop.application_users',
         'shop.contributor',
         'shop.warehouse',
+        'shop.client',
         'shop.locations',
         'shop.common'])
     .config(config)

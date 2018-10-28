@@ -1,34 +1,40 @@
-﻿using System;
+﻿using Shop.Model.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace Shop.Web.Models
 {
-    public class LocationViewModel
+    public class ClientViewModel
     {
+
         public int ID { get; set; }
-        
+
         public string Name { get; set; }
 
-        public int WarehouseID { get; set; } //khác tên này
+        public string Gender { get; set; }
 
-        public int ProductID { get; set; }
+        public DateTime Birthday { get; set; }
 
-        public int MaximumQuantity { get; set; }
+        public string Address { get; set; }
+
+        public int Phone_Number { get; set; }
+
+        public string Email { get; set; }
 
         public string Note { get; set; }
 
         public DateTime? CreatedDate { get; set; }
-        
+
         public string CreatedBy { get; set; }
 
         public DateTime? UpdatedDate { get; set; }
-        
+
         public string UpdatedBy { get; set; }
 
         public bool Status { get; set; }
-        
-        public virtual ProductViewModel Product { get; set; }
+
+        public virtual IEnumerable<ProductViewModel> Products { get; set; }
     }
 }

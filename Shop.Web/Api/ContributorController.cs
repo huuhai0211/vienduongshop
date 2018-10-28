@@ -16,7 +16,7 @@ namespace Shop.Web.Api
 {
     [RoutePrefix("api/contributor")]
     //[Authorize]
-    public class ContributorController : ApiControllerBase 
+    public class ContributorController : ApiControllerBase
     {
         private IContributorService _contributorService;
 
@@ -79,7 +79,7 @@ namespace Shop.Web.Api
                     newContributor.UpdateContributor(contributorViewModel);
                     newContributor.CreatedDate = DateTime.Now;
                     newContributor.CreatedBy = User.Identity.Name;
-                   _contributorService.Add(newContributor);
+                    _contributorService.Add(newContributor);
                     _contributorService.Save();
 
                     var responseData = Mapper.Map<Contributor, ContributorViewModel>(newContributor);
@@ -108,7 +108,7 @@ namespace Shop.Web.Api
                     dbContributor.UpdatedDate = DateTime.Now;
                     dbContributor.UpdatedBy = User.Identity.Name;
                     _contributorService.Update(dbContributor);
-                   _contributorService.Save();
+                    _contributorService.Save();
 
                     var responseData = Mapper.Map<Contributor, ContributorViewModel>(dbContributor);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
@@ -119,58 +119,58 @@ namespace Shop.Web.Api
             });
         }
 
-        //[Route("delete")]
-        //[HttpDelete]
-        //public HttpResponseMessage Delete(HttpRequestMessage request, int id)
-        //{
-        //    return CreateHttpResponse(request, () =>
-        //    {
-        //        HttpResponseMessage response = null;
-        //        if (!ModelState.IsValid)
-        //        {
-        //            response = request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
-        //        }
-        //        else
-        //        {
-        //            var oldContributor =_contributorService.Delete(id);
-        //            _contributorService.Save();
+        [Route("delete")]
+        [HttpDelete]
+        public HttpResponseMessage Delete(HttpRequestMessage request, int id)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+                if (!ModelState.IsValid)
+                {
+                    response = request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+                else
+                {
+                    var oldContributor = _contributorService.Delete(id);
+                    _contributorService.Save();
 
-        //            var responseData = Mapper.Map<Contributor, ContributorViewModel>(oldContributor);
-        //            response = request.CreateResponse(HttpStatusCode.Created, responseData);
+                    var responseData = Mapper.Map<Contributor, ContributorViewModel>(oldContributor);
+                    response = request.CreateResponse(HttpStatusCode.Created, responseData);
 
-        //        }
+                }
 
-        //        return response;
-        //    });
-        //}
+                return response;
+            });
+        }
 
-        //[Route("deletemulti")]
-        //[HttpDelete]
-        //public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedProductCategories)
-        //{
-        //    return CreateHttpResponse(request, () =>
-        //    {
-        //        HttpResponseMessage response = null;
-        //        if (!ModelState.IsValid)
-        //        {
-        //            response = request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
-        //        }
-        //        else
-        //        {
-        //            var listProductCategories = new JavaScriptSerializer().Deserialize<List<int>>(checkedProductCategories);
+        [Route("deletemulti")]
+        [HttpDelete]
+        public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedContributor)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+                if (!ModelState.IsValid)
+                {
+                    response = request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+                else
+                {
+                    var listContributor = new JavaScriptSerializer().Deserialize<List<int>>(checkedContributor);
 
-        //            foreach (var item in listProductCategories)
-        //            {
-        //                _contributorService.Delete(item);
-        //            }
-        //            _contributorService.Save();
-        //            response = request.CreateResponse(HttpStatusCode.Created, true);
+                    foreach (var item in listContributor)
+                    {
+                        _contributorService.Delete(item);
+                    }
+                    _contributorService.Save();
+                    response = request.CreateResponse(HttpStatusCode.Created, true);
 
-        //        }
+                }
 
-        //        return response;
-        //    });
-        //}
+                return response;
+            });
+        }
 
     }
 }

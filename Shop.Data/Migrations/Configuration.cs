@@ -14,11 +14,12 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;// lúc vừa bạn thêm cái này này
         }
 
         protected override void Seed(Shop.Data.ShopDbContext context)
         {
-            CreateAdmin(context);
+            //CreateAdmin(context);
             //CreateSlide(context);
             
         }
@@ -31,15 +32,15 @@
 
             var user = new ApplicationUser()
             {
-                UserName = "huuhai",
-                Email =  "huuhai0211@gmail.com",
+                UserName = "anhpham", 
+                Email =  "anhpham@gmail.com",
                 EmailConfirmed = true,
                 BirthDay = DateTime.Now,
                 FullName = ""
 
             };
 
-            manager.Create(user, "123654$");
+            manager.Create(user, "041095");
 
             if (!roleManager.Roles.Any())
             {
@@ -47,7 +48,7 @@
                 roleManager.Create(new IdentityRole { Name = "User" });
             }
 
-            var adminUser = manager.FindByEmail("huuhai0211@gmail.com");
+            var adminUser = manager.FindByEmail("anhpham@gmail.com");
 
             manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
         }

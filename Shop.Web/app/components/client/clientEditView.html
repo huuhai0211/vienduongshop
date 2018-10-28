@@ -1,13 +1,13 @@
 ﻿<!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-       Thêm mới nhà cung cấp
+        Cập nhật khách hàng
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
-        <li><a href="#">Danh mục quản lý</a></li>
-        <li><a ui-sref="contributor">Nhà cung cấp</a></li>
-        <li class="active">Thêm mới</li>
+        <li><a href="#">Sản phẩm</a></li>
+        <li><a ui-sref="contributor">Khách hàng</a></li>
+        <li class="active">Cập nhật</li>
     </ol>
 </section>
 <!-- Main content -->
@@ -15,57 +15,57 @@
     <!-- Horizontal Form -->
     <div class="box box-info">
         <div class="box-header with-border">
-            <h3 class="box-title">Thêm mới</h3>
+            <h3 class="box-title">{{client.Name}}</h3>
         </div><!-- /.box-header -->
         <!-- form start -->
-        <form class="form-horizontal" novalidate name="frmAddContributor" role="form" ng-submit="AddContributor()">
+        <form class="form-horizontal" novalidate name="frmUpdateClient" role="form" ng-submit="UpdateClient()">
             <div class="box-body">
                 <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Mã số thuế</label>
+                    <label for="inputEmail3" class="col-sm-2 control-label">Mã Khách hàng</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="alias" ng-model="contributor.ID_Business">
+                        <input type="text" class="form-control" name="id" ng-model="client.ID">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Tên nhà cung cấp</label>
+                    <label for="inputEmail3" class="col-sm-2 control-label">Họ và Tên</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" ng-maxlength="50" ng-change="GetSeoTitle()" required name="name" ng-model="contributor.Name">
-                        <span ng-show="frmAddContributor.name.$invalid && frmAddContributor.name.$touched" class="has-error">Phải nhập tên nhà cung cấp</span>                     
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Tiêu đề SEO</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" name="alias" ng-model="contributor.Alias">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Mô tả ngắn gọn</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" name="description" ng-model="contributor.Description">
+                        <input type="text" class="form-control" ng-change="GetSeoTitle()" required name="name" ng-model="client.Name">
+                        <span ng-show="frmAddClient.name.$invalid && frmAddClient.name.$touched" class="has-error">Phải nhập tên khách hàng</span>
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Giới tính</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="gender" ng-model="client.Gender">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Ngày sinh</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control"  name="birthday" ng-model="client.Birthday">
+                    </div>
+                </div>
+            <!--còn lỗi ở đâu nữa k còn. phần kho ạ-->
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Địa chỉ</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="description" ng-model="contributor.Address">
+                        <input type="text" class="form-control" name="address" ng-model="client.Address">
                     </div>
                 </div>
-           
+
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Số điện thoại</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="displayOrder" ng-model="contributor.Phone_Number">
+                        <input type="number" class="form-control" name="phone_number" ng-model="client.Phone_Number">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="image" ng-model="contributor.Email">
+                        <input type="text" class="form-control" name="email" ng-model="client.Email">
                     </div>
                 </div>
 
@@ -73,18 +73,18 @@
                     <div class="col-sm-offset-2 col-sm-10">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="status" ng-model="contributor.Status" ng-checked="contributor.Status"> Kích hoạt
+                                <input type="checkbox" name="status" ng-model="client.Status" ng-checked="client.Status"> Kích hoạt
                             </label>
                         </div>
                         <div class="checkbox">
-                            
+
                         </div>
                     </div>
                 </div>
             </div><!-- /.box-body -->
             <div class="box-footer">
-                <button ui-sref="contributor" class="btn btn-default">Hủy</button>
-                <button type="submit" ng-disabled="frmAddContributor.$invalid" class="btn btn-success pull-right">Lưu</button>
+                <button ui-sref="client" class="btn btn-default">Hủy</button>
+                <button type="submit" ng-disabled="frmUpdateClient.$invalid" class="btn btn-success pull-right">Lưu</button>
             </div><!-- /.box-footer -->
         </form>
     </div><!-- /.box -->

@@ -60,3 +60,4 @@ namespace Shop.Model.Models
         public virtual IEnumerable<Location> Locations { get; set; }
     }
 }
+//sao lại có ClientID ở bên Product thế? của cái cũ, xem khách mua hàng gì ấy
