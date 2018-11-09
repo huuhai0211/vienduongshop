@@ -22,6 +22,8 @@ namespace Shop.Web.Controllers
             this._productService = productService;
             this._commonService = commonService;
         }
+
+        [OutputCache(Duration = 60, Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult Index()
         {
             var lastestProductModel = _productService.GetLastest(5);

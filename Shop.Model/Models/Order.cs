@@ -24,11 +24,11 @@ namespace Shop.Model.Models
         [Required]
         [MaxLength(256)]
         public string CustomerMobile { get; set; }
-        [Required]
+        
         [MaxLength(256)]
         public string CustomerMessage { get; set; }
         [Required]
-        public DateTime? CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; }
         [Required]
         public string CreatedBy { get; set; }
         
@@ -38,7 +38,14 @@ namespace Shop.Model.Models
         public string PaymentStatus { get; set; }
 
         
-        public bool Status { get; set; }
+        public bool? Status { get; set; }
+
+        [StringLength(128)]
+        [Column(TypeName ="nvarchar")]
+        public string CustomerId { get; set; }
+
+        [ForeignKey("CustomerId")]
+        public virtual ApplicationUser User { get; set; }
 
         public virtual IEnumerable<OrderDetail> OrderDetail { get; set; }
     }

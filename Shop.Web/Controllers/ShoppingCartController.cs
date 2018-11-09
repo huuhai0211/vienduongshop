@@ -1,7 +1,10 @@
 ﻿using AutoMapper;
+using Microsoft.AspNet.Identity;
 using Shop.Common;
 using Shop.Model.Models;
 using Shop.Service;
+using Shop.Web.App_Start;
+using Shop.Web.Infrastructure.Extensions;
 using Shop.Web.Models;
 using System;
 using System.Collections.Generic;
@@ -15,9 +18,13 @@ namespace Shop.Web.Controllers
     public class ShoppingCartController : Controller
     {
         IProductService _productService;
-        public ShoppingCartController(IProductService productService)
+        IOrderService _orderService;
+        private ApplicationUserManager _userManager;
+        public ShoppingCartController(IProductService productService, IOrderService orderService, ApplicationUserManager userManager)
         {
             this._productService = productService;
+            this._orderService = orderService;
+            this._userManager = userManager;
         }
         // GET: ShoppingCart
         public ActionResult Index()
@@ -27,6 +34,67 @@ namespace Shop.Web.Controllers
                 Session[CommonConstants.SessionCart] = new List<ShoppingCartViewModel>();
             }
             return View();
+        }
+
+        public ActionResult CheckOut()
+        {
+            if (Session[CommonConstants.SessionCart] == null)
+            {
+                return Redirect("/gio-hang.html");
+            }
+            else
+            {
+                return View();
+            }
+           
+        }
+
+        public JsonResult GetUser()
+        {
+            if (Request.IsAuthenticated)
+            {
+                var userId = User.Identity.GetUserId();
+                var user = _userManager.FindById(userId);
+                return Json(new
+                {
+                    data = user,
+                    status = true
+                });
+            }
+            return Json(new
+            {
+                status = false
+            });
+        }
+
+        public JsonResult CreateOrder(string orderViewModel)
+        {
+            var order = new JavaScriptSerializer().Deserialize<OrderViewModel>(orderViewModel);
+            var orderNew = new Order();
+
+            orderNew.UpdateOrder(order);
+
+            if (Request.IsAuthenticated)
+            {
+                orderNew.CustomerId = User.Identity.GetUserId();
+                orderNew.CreatedBy = User.Identity.GetUserName();
+            }
+
+            var cart = (List<ShoppingCartViewModel>)Session[CommonConstants.SessionCart];
+            List<OrderDetail> orderDetails = new List<OrderDetail>();
+            foreach (var item in cart)
+            {
+                var detail = new OrderDetail();
+                detail.ProductID = item.ProductId;
+                detail.Quantity = item.Quantity;
+                orderDetails.Add(detail);
+            }
+
+            _orderService.Create(orderNew, orderDetails);
+            return Json(new
+            {
+                status = true
+            });
         }
 
         public JsonResult GetAll()
@@ -73,6 +141,25 @@ namespace Shop.Web.Controllers
             return Json(new
             {
                 status = true
+            });
+        }
+
+        [HttpPost]
+        public JsonResult DeleteItem(int productId)
+        {
+            var cartSession = (List<ShoppingCartViewModel>)Session[CommonConstants.SessionCart];
+            if (cartSession != null)
+            {
+                cartSession.RemoveAll(x => x.ProductId == productId);
+                Session[CommonConstants.SessionCart] = cartSession;
+                return Json(new
+                {
+                    status = true
+                });
+            }
+            return Json(new
+            {
+                status = false
             });
         }
 

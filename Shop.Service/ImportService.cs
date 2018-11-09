@@ -16,7 +16,7 @@ namespace Shop.Service
 
         IEnumerable<Import> GetAll();
 
-    //    IEnumerable<Import> GetAll(string keyword);
+        IEnumerable<Import> GetAll(string keyword);
 
         //IEnumerable<Import> GetAllByCategoryId(int productCategoryID);
 
@@ -49,13 +49,13 @@ namespace Shop.Service
             return _importRepository.GetAll();
         }
 
-        //public IEnumerable<Import> GetAll(string keyword)
-        //{
-        //    if (!string.IsNullOrEmpty(keyword))
-        //        return _importRepository.GetMulti(x => x.Name.Contains(keyword) || x.Description.Contains(keyword));
-        //    else
-        //        return _importRepository.GetAll();
-        //}
+        public IEnumerable<Import> GetAll(string keyword)
+        {
+            if (!string.IsNullOrEmpty(keyword))
+                return _importRepository.GetMulti(x => x.ID.ToString().Contains(keyword) || x.Description.Contains(keyword));
+            else
+                return _importRepository.GetAll();
+        }
 
         public Import GetById(int ID)
         {

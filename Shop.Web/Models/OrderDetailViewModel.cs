@@ -7,15 +7,10 @@ namespace Shop.Web.Models
 {
     public class OrderDetailViewModel
     {
-        public int OrderID { get; set; }
+        public int OrderID { set; get; }
 
-        public int ProductID { get; set; }
+        public int ProductID { set; get; }
 
-        public string Quantity { get; set; }
-
-       
-        public virtual ProductViewModel Product { get; set; }
-
-        public virtual OrderViewModel Order { get; set; }
+        public int Quantitty { set; get; }
     }
 }

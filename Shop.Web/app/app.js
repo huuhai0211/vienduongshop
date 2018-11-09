@@ -10,6 +10,8 @@
         'shop.warehouse',
         'shop.client',
         'shop.locations',
+        //'shop.invoices',
+        'shop.imports',
         'shop.common'])
     .config(config)
     .config(configAuthentication);

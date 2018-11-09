@@ -112,6 +112,42 @@
     <Compile Include="Migrations\201810190827255_AddGroupUser.Designer.cs">
       <DependentUpon>201810190827255_AddGroupUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810281048558_fixImport.cs" />
+    <Compile Include="Migrations\201810281048558_fixImport.Designer.cs">
+      <DependentUpon>201810281048558_fixImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811030254387_AddCustomerId.cs" />
+    <Compile Include="Migrations\201811030254387_AddCustomerId.Designer.cs">
+      <DependentUpon>201811030254387_AddCustomerId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811041639440_fixOrder.cs" />
+    <Compile Include="Migrations\201811041639440_fixOrder.Designer.cs">
+      <DependentUpon>201811041639440_fixOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811041719084_fixOrder2.cs" />
+    <Compile Include="Migrations\201811041719084_fixOrder2.Designer.cs">
+      <DependentUpon>201811041719084_fixOrder2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811041726437_fixOrder3.cs" />
+    <Compile Include="Migrations\201811041726437_fixOrder3.Designer.cs">
+      <DependentUpon>201811041726437_fixOrder3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811051508081_addPriceOrderDeteil.cs" />
+    <Compile Include="Migrations\201811051508081_addPriceOrderDeteil.Designer.cs">
+      <DependentUpon>201811051508081_addPriceOrderDeteil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811051513100_RemoveOriginalPrice.cs" />
+    <Compile Include="Migrations\201811051513100_RemoveOriginalPrice.Designer.cs">
+      <DependentUpon>201811051513100_RemoveOriginalPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811051538544_AddImportPrice.cs" />
+    <Compile Include="Migrations\201811051538544_AddImportPrice.Designer.cs">
+      <DependentUpon>201811051538544_AddImportPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811080127263_fixUpdateImport.cs" />
+    <Compile Include="Migrations\201811080127263_fixUpdateImport.Designer.cs">
+      <DependentUpon>201811080127263_fixUpdateImport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ApplicationGroupRepository.cs" />
@@ -197,6 +233,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810190827255_AddGroupUser.resx">
       <DependentUpon>201810190827255_AddGroupUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810281048558_fixImport.resx">
+      <DependentUpon>201810281048558_fixImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811030254387_AddCustomerId.resx">
+      <DependentUpon>201811030254387_AddCustomerId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811041639440_fixOrder.resx">
+      <DependentUpon>201811041639440_fixOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811041719084_fixOrder2.resx">
+      <DependentUpon>201811041719084_fixOrder2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811041726437_fixOrder3.resx">
+      <DependentUpon>201811041726437_fixOrder3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811051508081_addPriceOrderDeteil.resx">
+      <DependentUpon>201811051508081_addPriceOrderDeteil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811051513100_RemoveOriginalPrice.resx">
+      <DependentUpon>201811051513100_RemoveOriginalPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811051538544_AddImportPrice.resx">
+      <DependentUpon>201811051538544_AddImportPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811080127263_fixUpdateImport.resx">
+      <DependentUpon>201811080127263_fixUpdateImport.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

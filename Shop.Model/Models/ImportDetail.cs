@@ -19,12 +19,21 @@ namespace Shop.Model.Models
         [Column(Order = 2)]
         public int ProductID { get; set; }
 
+        
+        public int WarehouseId { get; set; }
+
         public string Quantity { get; set; }
+
+        public decimal Price { get; set; }
+        
 
         [ForeignKey("ProductID")]
         public virtual Product Product { get; set; }
 
         [ForeignKey("ImportID")]
         public virtual Import Import { get; set; }
+
+        [ForeignKey("WarehouseId")]
+        public virtual Warehouse Warehouses { get; set; }
     }
 }

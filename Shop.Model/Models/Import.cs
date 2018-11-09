@@ -12,7 +12,7 @@ namespace Shop.Model.Models
     public class Import
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
         
         [Required]
@@ -20,12 +20,10 @@ namespace Shop.Model.Models
 
         [Required]
         public string CreatedBy { get; set; }
-
-        [Required]
+        
         public DateTime? UpdatedDate { get; set; }
-
-        [Required]
-        public string UpdateddBy { get; set; }
+        
+        public string UpdatedBy { get; set; }
 
         public bool Status { get; set; }
 

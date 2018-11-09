@@ -44,5 +44,8 @@ namespace Shop.Model.Models
 
         [ForeignKey("ProductID")]
         public virtual Product Product { get; set; }
+
+        public virtual IEnumerable<ImportDetail> ImportDetails { get; set; }
+
     }
 }

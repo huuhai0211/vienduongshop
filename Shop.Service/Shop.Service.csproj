@@ -66,6 +66,7 @@
     <Compile Include="ImportDetailService.cs" />
     <Compile Include="ImportService.cs" />
     <Compile Include="LocationService.cs" />
+    <Compile Include="OrderService.cs" />
     <Compile Include="PostCategoryService.cs" />
     <Compile Include="PostService.cs" />
     <Compile Include="ProductCategoryService.cs" />

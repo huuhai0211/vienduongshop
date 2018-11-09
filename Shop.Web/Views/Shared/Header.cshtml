@@ -1,4 +1,5 @@
-﻿@{
+﻿@using Microsoft.AspNet.Identity;
+@{
     Layout = null;
 }
 <header class="header-area">
@@ -17,8 +18,21 @@
                 </div>
                 <div class="col-lg-4 col-md-3 col-12">
                     <div class="header-login-reg f-right">
-                        <a class="header-log" href="login-register.html">Đăng nhập</a>
-                        <a class="header-reg" href="login-register.html">Đăng kí</a>
+                        @if (Request.IsAuthenticated)
+                        {
+                            using (Html.BeginForm("LogOut", "Account", FormMethod.Post, new { @id = "logout" }))
+                            {
+                                @Html.AntiForgeryToken();
+                                <a class="header-log" href="tai-khoan.html">Xin chào: @User.Identity.Name</a>
+                                <a class="header-log" href="javascript:{}" onclick="document.getElementById('logout').submit();">Thoát</a>
+                            }
+                        }
+                        else
+                        {
+                            <a class="header-log" href="/dang-nhap.html">Đăng nhập</a>
+                            <a class="header-reg" href="/dang-ky.html">Đăng kí</a>
+                        }
+
                     </div>
                 </div>
             </div>

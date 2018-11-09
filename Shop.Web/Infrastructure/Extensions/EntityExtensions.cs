@@ -92,6 +92,7 @@ namespace Shop.Web.Infrastructure.Extensions
             product.Status = productViewModel.Status;
             product.Tags = productViewModel.Tags;
         }
+
         public static void UpdateContributor(this Contributor contributor, ContributorViewModel contributorViewModel)
         {
             contributor.ID_Business = contributorViewModel.ID_Business;
@@ -107,6 +108,7 @@ namespace Shop.Web.Infrastructure.Extensions
             contributor.UpdatedBy = contributorViewModel.UpdatedBy;
             contributor.Status = contributorViewModel.Status;
         }
+
         public static void UpdateClient(this Client client, ClientViewModel clientViewModel)
         {
             client.ID = clientViewModel.ID;
@@ -123,6 +125,7 @@ namespace Shop.Web.Infrastructure.Extensions
             client.UpdatedBy = clientViewModel.UpdatedBy;
             client.Status = clientViewModel.Status;
         }
+
         public static void UpdateWarehouse(this Warehouse warehouse, WarehouseViewModel warehouseViewModel)
         {
             warehouse.ID = warehouseViewModel.ID;
@@ -138,6 +141,7 @@ namespace Shop.Web.Infrastructure.Extensions
             warehouse.Status = warehouseViewModel.Status;
 
         }
+
         public static void UpdateLocation(this Location location, LocationViewModel locationViewModel)
         {
             location.ID = locationViewModel.ID;
@@ -152,6 +156,7 @@ namespace Shop.Web.Infrastructure.Extensions
             location.UpdatedBy = locationViewModel.UpdatedBy;
             location.Status = locationViewModel.Status;
         }
+
         public static void UpdateApplicationGroup(this ApplicationGroup appGroup, ApplicationGroupViewModel appGroupViewModel)
         {
             appGroup.ID = appGroupViewModel.ID;
@@ -167,6 +172,7 @@ namespace Shop.Web.Infrastructure.Extensions
             appRole.Name = appRoleViewModel.Name;
             appRole.Description = appRoleViewModel.Description;
         }
+
         public static void UpdateUser(this ApplicationUser appUser, ApplicationUserViewModel appUserViewModel, string action = "add")
         {
 
@@ -176,6 +182,40 @@ namespace Shop.Web.Infrastructure.Extensions
             appUser.Email = appUserViewModel.Email;
             appUser.UserName = appUserViewModel.UserName;
             appUser.PhoneNumber = appUserViewModel.PhoneNumber;
+        }
+
+        public static void UpdateImport(this Import import, ImportViewModel importViewModel)
+        {
+            import.ID = importViewModel.ID;
+            import.CreatedDate = importViewModel.CreatedDate;
+            import.CreatedBy = importViewModel.CreatedBy;
+            import.UpdatedDate = importViewModel.UpdatedDate;
+            import.UpdatedBy = importViewModel.UpdatedBy;
+            import.Status = importViewModel.Status;
+            import.Description = importViewModel.Description;
+        }
+
+        public static void UpdateImportDetail(this ImportDetail importDetail, ImportDetailViewModel importDetailViewModel)
+        {
+            importDetail.ImportID = importDetailViewModel.ImportID;
+            importDetail.ProductID = importDetailViewModel.ProductID;
+            importDetail.WarehouseId = importDetailViewModel.WarehouseId;
+            importDetail.Quantity = importDetailViewModel.Quantity;
+            importDetail.Price = importDetailViewModel.Price;
+        }
+
+        public static void UpdateOrder(this Order order, OrderViewModel orderVm)
+        {
+            order.CustomerName = orderVm.CustomerName;
+            order.CustomerAddress = orderVm.CustomerAddress;
+            order.CustomerEmail = orderVm.CustomerEmail;
+            order.CustomerMobile = orderVm.CustomerMobile;
+            order.CustomerMessage = orderVm.CustomerMessage;
+            order.PaymentMethod = orderVm.PaymentMethod;
+            order.CreatedDate = DateTime.Now;
+            order.CreatedBy = orderVm.CreatedBy;
+            order.Status = orderVm.Status;
+            order.CustomerId = orderVm.CustomerId;
         }
     }
 }
